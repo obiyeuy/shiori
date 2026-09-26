@@ -5,7 +5,7 @@ export function validatePage(page:number){if(!Number.isSafeInteger(page)||page<1
 export async function getHomeData(pool:Pool){
  const results=await Promise.all([
   pool.query<PublicRow>(`SELECT p.*,c.first_published_at,(SELECT max(created_at) FROM publication_events e WHERE e.content_id=c.id AND e.kind IN ('first','important')) update_at FROM ${currentPublic} WHERE p.type IN ('article','note','moment') ORDER BY update_at DESC NULLS LAST,c.first_published_at DESC,c.id LIMIT 6`),
-  pool.query<PublicRow>(`SELECT p.*,c.first_published_at FROM ${currentPublic} WHERE p.type='project' ORDER BY c.first_published_at DESC,c.id LIMIT 3`),
+  pool.query<PublicRow>(`SELECT p.*,c.first_published_at FROM ${currentPublic} JOIN site_settings s ON s.key='home-projects' JOIN LATERAL jsonb_array_elements_text(CASE WHEN jsonb_typeof(s.value)='array' THEN s.value ELSE '[]'::jsonb END) WITH ORDINALITY AS selected(id,position) ON selected.id=c.id::text WHERE p.type='project' ORDER BY selected.position LIMIT 3`),
   pool.query<PublicRow>(`SELECT p.*,c.first_published_at FROM ${currentPublic} WHERE p.type='tool' ORDER BY c.first_published_at DESC,c.id LIMIT 3`),
   pool.query<PublicRow>(`SELECT p.*,c.first_published_at FROM ${currentPublic} JOIN site_settings s ON s.key='featured-content' JOIN LATERAL jsonb_array_elements_text(CASE WHEN jsonb_typeof(s.value)='array' THEN s.value ELSE '[]'::jsonb END) WITH ORDINALITY AS featured(id,position) ON featured.id=c.id::text WHERE p.type IN ('article','note') ORDER BY featured.position LIMIT 3`)
  ]);
@@ -26,7 +26,7 @@ export async function getPublicDetail(pool:Pool,type:PublicType,slug:string):Pro
  return alias.rowCount?{redirect:publicHref(type,alias.rows[0].slug)}:null;
 }
 export async function publicTags(pool:Pool){return (await pool.query<{id:string;name:string;count:string}>(`SELECT t.id,t.name,count(*) FROM tags t JOIN version_tags vt ON vt.tag_id=t.id JOIN public_content p ON p.version_id=vt.version_id JOIN content_items c ON c.id=p.content_id AND c.public_version_id=p.version_id GROUP BY t.id ORDER BY t.name`)).rows;}
-export async function publicSeries(pool:Pool){return (await pool.query<{id:string;name:string;count:string}>(`SELECT s.id,s.name,count(*) FROM series s JOIN series_members m ON m.series_id=s.id JOIN content_items c ON c.id=m.content_id JOIN public_content p ON p.content_id=c.id AND p.version_id=c.public_version_id WHERE s.status='public' GROUP BY s.id ORDER BY s.name`)).rows;}
+export async function publicSeries(pool:Pool){return (await pool.query<{id:string;name:string;description:string;cover:string|null;count:string}>(`SELECT s.id,s.name,s.description,s.cover,count(*) FROM series s JOIN series_members m ON m.series_id=s.id JOIN content_items c ON c.id=m.content_id JOIN public_content p ON p.content_id=c.id AND p.version_id=c.public_version_id WHERE s.status='public' GROUP BY s.id ORDER BY s.name`)).rows;}
 export async function publicCollection(pool:Pool,kind:'tag'|'series',id:string,page=1){
  validatePage(page);
  if(!/^[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}$/.test(id))return null;
@@ -34,7 +34,7 @@ export async function publicCollection(pool:Pool,kind:'tag'|'series',id:string,p
  const join=kind==='tag'?'JOIN version_tags m ON m.version_id=p.version_id WHERE m.tag_id=$1':'JOIN series_members m ON m.content_id=c.id WHERE m.series_id=$1';
  const order=kind==='tag'?'c.first_published_at DESC,c.id':'m.position,c.id';
  const rows=await pool.query<PublicRow>(`SELECT p.*,c.first_published_at FROM ${currentPublic} ${join} ORDER BY ${order} LIMIT 20 OFFSET $2`,[id,(page-1)*20]);
- return {name:collection.name,items:rows.rows,page,total:Number(collection.count)};
+ return {name:collection.name,description:'description' in collection?String(collection.description):'',cover:'cover' in collection?collection.cover as string|null:null,items:rows.rows,page,total:Number(collection.count)};
 }
 export type PublicNavigationItem=Pick<PublicRow,'content_id'|'type'|'slug'|'title'|'summary'>;
 export type PublicDetailNavigation={series:null|{id:string;name:string;total:number;previous:PublicNavigationItem|null;next:PublicNavigationItem|null};previous:PublicNavigationItem|null;next:PublicNavigationItem|null;related:PublicNavigationItem[]};

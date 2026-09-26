@@ -8,3 +8,8 @@ it('retains last success when latest run failed and uses snapshot time for stale
  expect(status.summarizeOperation(null,now).state).toBe('no-record');
  expect(status.summarizeOperation({state:'success',eventAt:'not-a-time'},now).state).toBe('read-failure');
 });
+it('marks stale collection independently of the event and preserves safe detail',()=>{
+ const now=new Date('2026-09-27T12:00:00Z');
+ expect(status.summarizeOperation({state:'success',eventAt:'2026-09-27T11:59:00Z',collectedAt:'2026-09-27T10:00:00Z'},now,300000).state).toBe('stale');
+ expect(status.summarizeOperation({state:'running',eventAt:'2026-09-27T08:00:00Z',collectedAt:'2026-09-27T11:59:00Z'},now).state).toBe('unknown');
+});

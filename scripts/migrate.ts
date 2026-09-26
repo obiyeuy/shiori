@@ -3,7 +3,7 @@ import { createDbPool } from '../src/lib/server/db/client.js';
 import { applyMigration } from '../src/lib/server/db/migrate.js';
 const pool=createDbPool();
 try{
- for(const name of ['0000_initial','0001_content_pipeline','0002_public_search']){
+ for(const name of ['0000_initial','0001_content_pipeline','0002_public_search','0003_workspace']){
  const sql=await readFile(new URL(`../drizzle/${name}.sql`,import.meta.url),'utf8');
  console.log(name,await applyMigration(pool,name,sql));
  }

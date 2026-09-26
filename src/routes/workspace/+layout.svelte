@@ -1,0 +1,13 @@
+<script lang="ts">
+ import {onMount} from 'svelte';import {page} from '$app/state';import type {Snippet} from 'svelte';import '$lib/components/ui/tokens.css';
+ let {children}:{children:Snippet}=$props();let ready=$state(false);onMount(()=>{ready=true;});let drawer:HTMLDialogElement;let opener:HTMLButtonElement;
+ const links=[['/workspace','概览'],['/workspace/content','内容'],['/workspace/tags','标签'],['/workspace/series','系列'],['/workspace/media','媒体'],['/workspace/schedules','排期'],['/workspace/comments','评论设置'],['/workspace/services','服务入口'],['/workspace/settings','站点设置'],['/workspace/security','账号安全']];
+ function close(){drawer.close();opener.focus();}
+</script>
+<a class="skip" href="#workspace-main">跳到工作台内容</a>
+<header><button disabled={!ready} bind:this={opener} onclick={()=>drawer.showModal()} aria-label="打开工作台导航">菜单</button><a href="/workspace">站长工作台</a><a href="/">查看公开站</a></header>
+{#snippet navigation()}<nav aria-label="工作台导航">{#each links as [href,label]}<a {href} aria-current={page.url.pathname===href?'page':undefined}>{label}</a>{/each}<a href="/workspace/import-export">导入与导出</a><a href="/">查看公开站</a><form action="/logout" method="post"><button>退出登录</button></form></nav>{/snippet}
+<aside><a class="brand" href="/workspace">站长工作台</a>{@render navigation()}</aside>
+<dialog bind:this={drawer} onclose={()=>opener?.focus()} onclick={event=>{if((event.target as HTMLElement).closest('a'))close();}}><button onclick={close}>关闭导航</button>{@render navigation()}</dialog>
+<div class="workspace" id="workspace-main">{@render children()}</div>
+<style>aside{position:fixed;inset:0 auto 0 0;width:240px;background:var(--surface);border-right:1px solid var(--line);padding:24px;overflow:auto}nav{display:flex;flex-direction:column;gap:4px}nav a{padding:10px 12px;min-height:44px;border-radius:8px;color:var(--text)}nav a[aria-current]{background:var(--soft);color:var(--primary);font-weight:700}.brand{display:block;font-weight:700;margin-bottom:24px}.workspace{margin-left:240px;padding:32px;min-width:0}.workspace :global(main){max-width:1200px;margin:auto}header{display:none}.skip{position:absolute;transform:translateY(-200%);z-index:10;background:var(--surface);padding:12px}.skip:focus{transform:none}dialog{margin:0;width:min(320px,90vw);max-height:100dvh;height:100dvh;border:0;padding:20px}dialog::backdrop{background:#0007}@media(max-width:1099px){aside{display:none}header{display:flex;align-items:center;gap:16px;padding:12px;background:var(--surface);flex-wrap:wrap}.workspace{margin-left:0;padding:20px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}</style>

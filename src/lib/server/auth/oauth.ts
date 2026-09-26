@@ -4,9 +4,9 @@ import * as oauth from 'oauth4webapi';
 import { createSessionToken, hashToken } from './session.js';
 import type { RuntimeConfig } from '../config.js';
 const server={issuer:'https://github.com',authorization_endpoint:'https://github.com/login/oauth/authorize',token_endpoint:'https://github.com/login/oauth/access_token'};
-export async function beginOAuth(pool:Pool):Promise<{state:string;challenge:string}>{
+export async function beginOAuth(pool:Pool,bindingSessionId:string|null=null):Promise<{state:string;challenge:string}>{
  const state=createSessionToken();const verifier=oauth.generateRandomCodeVerifier();
- await pool.query("INSERT INTO oauth_attempts(state_digest,verifier,expires_at) VALUES($1,$2,now()+interval '10 minutes')",[await hashToken(state),verifier]);
+ await pool.query("INSERT INTO oauth_attempts(state_digest,verifier,binding_session_id,expires_at) VALUES($1,$2,$3,now()+interval '10 minutes')",[await hashToken(state),verifier,bindingSessionId]);
  return {state,challenge:await oauth.calculatePKCECodeChallenge(verifier)};
 }
 export async function consumeOAuth(pool:Pool,state:string,cookie:string):Promise<string>{

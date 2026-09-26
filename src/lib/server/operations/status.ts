@@ -11,7 +11,7 @@ export function summarizeOperation(record:unknown,now=new Date(),freshForMs=26*3
   if(value[key]!=null){const date=new Date(String(value[key]));if(!Number.isFinite(+date)||+date>+now)return {...empty,state:'read-failure'};result[key]=date;}
  }
  if(result.state==='success' && (!result.eventAt||!result.collectedAt))return {...result,state:'unknown'};
- if(result.state==='success' && result.eventAt && +now-+result.eventAt>freshForMs)result.state='stale';
+ if(result.state==='success' && ((result.eventAt && +now-+result.eventAt>freshForMs)||(result.collectedAt && +now-+result.collectedAt>freshForMs)))result.state='stale';
  if(result.state==='running' && result.eventAt && +now-+result.eventAt>2*3600000)result.state='unknown';
  return result;
 }
