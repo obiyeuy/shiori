@@ -15,5 +15,6 @@ try{
  const configPath=resolve(root,'check.tsconfig.json');await writeFile(configPath,JSON.stringify(config,null,2));
  await run(['node_modules/svelte-check/bin/svelte-check','--tsconfig',configPath]);
  if(process.argv.includes('--tests'))await run(['node_modules/vitest/vitest.mjs','run',...process.argv.filter(arg=>arg.endsWith('.test.ts'))]);
- if(process.argv.includes('--build'))await run(['node_modules/vite/bin/vite.js','build']);
+ if(process.argv.includes('--build')||process.argv.includes('--acceptance'))await run(['node_modules/vite/bin/vite.js','build']);
+ if(process.argv.includes('--acceptance'))await run(['--import','tsx','scripts/acceptance.ts']);
 }catch(error){console.error(error.message);process.exitCode=1;}
