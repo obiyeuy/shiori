@@ -1,0 +1,151 @@
+Requirements – WordPress.org
+Skip to content
+WordPress.org
+Showcase
+Plugins
+Themes
+Hosting
+News
+Resources
+Learn WordPress
+Documentation
+Education
+Forums
+Developers
+Blocks
+Patterns
+Photos
+Openverse
+↗
+︎
+WordPress.tv
+↗
+︎
+About
+About WordPress
+Make WordPress
+Events
+Five for the Future
+Enterprise
+Gutenberg
+↗
+︎
+Job Board
+↗
+︎
+Swag
+↗
+︎
+Get WordPress
+Search in WordPress.org
+Get WordPress
+WordPress.org
+About
+Requirements
+The technology
+Requirements
+Features
+Security
+Roadmap
+History
+The details
+Domains
+License
+Accessibility
+Privacy Policy
+Statistics
+The people
+Philosophy
+Etiquette
+Logos
+People of WordPress
+The technology
+Requirements
+Features
+Security
+Roadmap
+History
+The details
+Domains
+License
+Accessibility
+Privacy Policy
+Statistics
+The people
+Philosophy
+Etiquette
+Logos
+People of WordPress
+Requirements
+To run WordPress, it’s recommended your host supports:
+PHP
+version 8.3 or greater.
+MariaDB
+version 10.11 or greater OR
+MySQL
+version 8.0 or greater.
+HTTPS
+support
+That’s really it.
+Apache
+or
+Nginx
+is recommended as the most robust and featureful server for running WordPress, but any server that supports PHP and MySQL will do. That said, for the smoothest experience in setting up—and running—your site,
+each host on the hosting page
+supports the above and more with no problems.
+For detailed PHP extension recommendations, see the
+Hosting Handbook
+.
+Note: If you are in a legacy environment where you only have older PHP or MySQL versions, WordPress also works with PHP 7.4+ and MySQL 5.5.5+. However, these versions have reached their official End Of Life and
+may expose your site to security vulnerabilities
+.
+Ask your host to run WordPress
+If you’re unsure whether or not your host can already run WordPress, here’s a request you can copy and paste to send them!
+I’m interested in running the open source WordPress <https://wordpress.org/> web software, and I was wondering if my account supported the following:
+PHP 8.3 or greater
+MariaDB 10.11 or greater OR MySQL 8.0 or greater
+Nginx or Apache with mod_rewrite module
+HTTPS support
+Thanks!
+Not required, but recommended for better security
+Hosting is more secure when PHP applications, like WordPress, are run using your account’s username instead of the server’s default shared username. Ask your potential host what steps they take to ensure the security of your account.
+About
+News
+Hosting
+Privacy
+Showcase
+Themes
+Plugins
+Patterns
+Learn
+Documentation
+Developers
+WordPress.tv
+↗
+Get Involved
+Events
+Donate
+↗
+Swag
+↗
+WordPress.com
+↗
+Matt
+↗
+bbPress
+↗
+BuddyPress
+↗
+WordPress.org
+WordPress.org
+Visit our X (formerly Twitter) account
+Visit our Bluesky account
+Visit our Mastodon account
+Visit our Threads account
+Visit our Facebook page
+Visit our Instagram account
+Visit our LinkedIn account
+Visit our TikTok account
+Visit our YouTube channel
+Visit our Tumblr account
+The WordPress® trademark is the intellectual property of the WordPress Foundation.

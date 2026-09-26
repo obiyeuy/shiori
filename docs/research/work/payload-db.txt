@@ -1,0 +1,233 @@
+Database | Documentation | Payload
+Product
+Simplify your stack and build anything. Or everything.
+Schedule a Demo
+USE CASES
+Headless CMS
+Enterprise App Builder
+Headless E-Commerce
+Digital Asset Management
+FEATURES
+Multi-Tenancy
+White Label
+Localization
+Access Control
+Auth
+CASE STUDIES
+See what others are building with Payload.
+Browse Case Studies
+Why Payload
+Build tomorrow’s web with a modern solution you truly own.
+PAYLOAD IS FOR
+Developers
+Marketing teams
+Enterprise companies
+Agencies & Consultancies
+COMPARE PAYLOAD
+Payload vs WordPress
+Payload vs Contentful
+Payload vs Sanity
+Payload vs Strapi
+Payload vs Directus
+AGENCY TESTIMONIAL
+"Payload has transformed the way our clients manage content. It's an indispensable tool for any modern agency."
+Become a Partner
+Find a Partner
+Developers
+Code-based nature means you can build on top of it to power anything.
+Resources
+Documentation
+Examples
+Templates
+GitHub
+Releases
+Blog
+Guides & Tutorials
+Community
+Roadmap
+Discord
+Community Help
+Resources for Developers
+Get the resources you need to start building today
+Guides & Tutorials
+Explore Docs
+Enterprise
+It’s time to take back your content infrastructure.
+Schedule a Demo
+Enterprise Features
+SSO
+AI Auto-Embedding
+Publishing Workflows
+Visual Editor
+Static A/B testing
+AI features
+Customer Stories
+Microsoft
+ASICS
+Blue Origin
+Hello Bello
+Tekton
+Featured Customer Story
+Microsoft chose Payload to tell the world about AI.
+Read the case study
+Browse all
+Docs
+Login
+Get Started
+Database
+Payload is database agnostic, meaning you can use any type of database behind Payload's familiar APIs. Payload is designed to interact with your database through a Database Adapter, which is a thin layer that translates Payload's internal data structures into your database's native data structures.
+Currently, Payload officially supports the following Database Adapters:
+MongoDB
+with
+Mongoose
+Postgres
+with
+Drizzle
+SQLite
+with
+Drizzle
+To configure a Database Adapter, use the
+db
+property in your
+Payload Config
+:
+1
+import
+{
+buildConfig
+}
+from
+'payload'
+2
+import
+{
+mongooseAdapter
+}
+from
+'@payloadcms/db-mongodb'
+3
+4
+export
+default
+buildConfig
+(
+{
+5
+// ...
+6
+db
+:
+mongooseAdapter
+(
+{
+7
+url
+:
+process
+.
+env
+.
+DATABASE_URL
+,
+8
+}
+)
+,
+9
+}
+)
+Reminder:
+The Database Adapter is an external dependency and must be installed in your project separately from Payload. You can find the installation instructions for each Database Adapter in their respective documentation.
+Selecting a Database
+There are several factors to consider when choosing which database technology and hosting option is right for your project and workload. Payload can theoretically support any database, but it's up to you to decide which database to use.
+There are two main categories of databases to choose from:
+Non-Relational Databases
+Relational Databases
+Non-Relational Databases
+If your project has a lot of dynamic fields, and you are comfortable with allowing Payload to enforce data integrity across your documents, MongoDB is a great choice. With it, your Payload documents are stored as
+one
+document in your database—no matter if you have localization enabled, how many block or array fields you have, etc. This means that the shape of your data in your database will very closely reflect your field schema, and there is minimal complexity involved in storing or retrieving your data.
+You should prefer MongoDB if:
+You prefer simplicity within your database
+You don't want to deal with keeping production / staging databases in sync via
+DDL changes
+Most (or everything) in your project is
+Localized
+You leverage a lot of
+Arrays
+,
+Blocks
+, or
+hasMany
+Select
+fields
+Relational Databases
+Many projects might call for more rigid database architecture where the shape of your data is strongly enforced at the database level. For example, if you know the shape of your data and it's relatively "flat", and you don't anticipate it to change often, your workload might suit relational databases like Postgres very well.
+You should prefer a relational DB like Postgres or SQLite if:
+You are comfortable with
+Migrations
+You require enforced data consistency at the database level
+You have a lot of relationships between collections and require relationships to be enforced
+Payload Differences
+It's important to note that nearly every Payload feature is available in all of our officially supported Database Adapters, including
+Localization
+,
+Arrays
+,
+Blocks
+, etc. The only thing that is not supported in SQLite yet is the
+Point Field
+, but that should be added soon.
+It's up to you to choose which database you would like to use based on the requirements of your project. Payload has no opinion on which database you should ultimately choose.
+Was this page helpful?
+Next
+Migrations
+Related Guides
+How to set up Payload with SQLite and Turso
+How to set up Payload with Supabase for your Next.js app
+On this page
+Selecting a Database
+Non-Relational Databases
+Relational Databases
+Payload Differences
+Star on GitHub
+Star
+Chat on Discord
+Discord
+online
+Can't find what you're looking for?
+Browse community help
+Was this page helpful?
+Edit this page on GitHub
+Use Cases
+Content Management System
+Enterprise App Builder
+Headless E-Commerce
+Digital Asset Management
+Developers
+Documentation
+Community Help
+Roadmap
+Templates
+Releases
+Company
+Pricing
+Enterprise
+Case Studies
+Partner With Us
+Find a Partner
+Blog
+Security
+Compare Payload
+Terms of Service
+Privacy Policy
+Contact
+Stay connected
+Subscribe to our newsletter
+Submit
+Switch themes
+Auto
+Light
+Dark
+Search
+Search

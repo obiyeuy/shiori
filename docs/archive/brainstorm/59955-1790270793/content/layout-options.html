@@ -1,0 +1,55 @@
+<h2>首页与导航布局</h2>
+<p class="subtitle">比较公开内容和登录后的私人服务入口如何共存</p>
+
+<div class="cards">
+  <div class="card" data-choice="content-first" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="mock-nav">站点名　文章　笔记　动态　作品　工具　资源</div>
+      <div style="display:flex;min-height:210px">
+        <div class="mock-content" style="flex:1">
+          <div class="label">首页</div>
+          <h3>最近更新</h3>
+          <p>文章与笔记列表占主要空间</p>
+          <p>精选作品　精选工具　近期动态</p>
+        </div>
+        <div class="mock-sidebar" style="width:150px">关于<br><br>登录<br>私人服务</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A：内容优先的顶部导航</h3>
+      <p>公开内容占主角，登录后在右上角进入管理和私人服务。适合个人站的阅读路径，页面结构较轻。</p>
+      <div class="pros-cons"><div class="pros"><h4>优点</h4><ul><li>访客一眼看到内容</li><li>公开与私人边界清楚</li></ul></div><div class="cons"><h4>取舍</h4><ul><li>栏目多时顶部会变拥挤</li></ul></div></div>
+    </div>
+  </div>
+
+  <div class="card" data-choice="workspace-sidebar" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="display:flex;min-height:245px">
+        <div class="mock-sidebar" style="width:170px">个人站<br><br>首页<br>文章<br>笔记<br>动态<br>作品<br>工具<br><br>私人空间<br>服务入口<br>管理后台</div>
+        <div class="mock-content" style="flex:1"><div class="label">首页</div><h3>最近内容</h3><p>文章卡片　笔记卡片</p><p>作品与工具卡片</p><p>近期动态</p></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B：工作台式侧栏</h3>
+      <p>桌面端固定侧栏承载公开栏目和登录后的私人服务；移动端改为抽屉。更接近 AcoFork 的统一应用感。</p>
+      <div class="pros-cons"><div class="pros"><h4>优点</h4><ul><li>栏目扩展空间大</li><li>服务入口始终容易找到</li></ul></div><div class="cons"><h4>取舍</h4><ul><li>首页个人站气质较弱</li><li>移动端需额外设计</li></ul></div></div>
+    </div>
+  </div>
+
+  <div class="card" data-choice="split-entry" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="mock-nav">个人站　　　　　　　　　　　　　　　　　进入空间</div>
+      <div style="display:flex;min-height:210px;gap:10px;padding:14px">
+        <div class="mock-content" style="flex:1"><div class="label">公开站</div><h3>阅读与浏览</h3><p>文章　笔记　作品　工具　资源</p></div>
+        <div class="mock-content" style="flex:1"><div class="label">登录后</div><h3>我的空间</h3><p>服务入口　管理　后续任务和日记</p></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C：公开站与个人空间双入口</h3>
+      <p>首页只负责公开内容；登录后进入独立的空间首页，服务入口、管理后台和未来私人功能都在空间内。</p>
+      <div class="pros-cons"><div class="pros"><h4>优点</h4><ul><li>公开站最干净</li><li>私人功能边界清楚</li></ul></div><div class="cons"><h4>取舍</h4><ul><li>需要设计两套首页</li><li>登录后跳转感更明显</li></ul></div></div>
+    </div>
+  </div>
+</div>
+
+<p class="subtitle">请选择最接近你的方向，也可以说明想混合哪些部分。</p>

@@ -1,0 +1,20 @@
+exec(open('work/research_products.py').read().split('sources={')[0])
+sources={
+'halo-index':'https://docs.halo.run/llms.txt',
+'halo-posts':'https://docs.halo.run/guide/use/posts.md',
+'halo-attachments':'https://docs.halo.run/guide/use/attachments.md',
+'halo-readme-main':'https://raw.githubusercontent.com/halo-dev/halo/main/README.md',
+'halo-compare':'https://www.halo.run/compare',
+'strapi-content':'https://docs.strapi.io/cms/features/content-type-builder',
+'strapi-media':'https://docs.strapi.io/cms/features/media-library',
+'strapi-drafts':'https://docs.strapi.io/cms/features/draft-and-publish',
+'strapi-history':'https://docs.strapi.io/cms/features/content-history',
+'strapi-deploy':'https://docs.strapi.io/cms/deployment',
+'directus-database':'https://directus.io/docs/configuration/database',
+'directus-files':'https://directus.io/docs/guides/files/access',
+'mysql-backup':'https://dev.mysql.com/doc/refman/8.4/en/mysqldump.html',
+'halo-links':'https://raw.githubusercontent.com/halo-sigs/plugin-links/main/README.md',
+'halo-photos':'https://raw.githubusercontent.com/halo-sigs/plugin-photos/main/README.md',
+}
+pat=re.compile(r'MySQL|Markdown|markdown|内存|附件|备份|license|License|付费|免费|Premium|Growth|Enterprise|minimum|memory|private|public|authorization|restore|media|draft|snapshot',re.I)
+exec(open('work/research_products.py').read().split('def get(a):')[1].join(['def get(a):','']))

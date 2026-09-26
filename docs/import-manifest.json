@@ -1,0 +1,1250 @@
+[
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/.superpowers/brainstorm/59955-1790270793/content/layout-options.html",
+    "destination": "docs/archive/brainstorm/59955-1790270793/content/layout-options.html",
+    "source_sha256": "ee98a51e852dfbd1ba1d34a1c65ed3da7fd8519175ce2e5aead09204f3ce360b",
+    "destination_sha256": "ee98a51e852dfbd1ba1d34a1c65ed3da7fd8519175ce2e5aead09204f3ce360b"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/.superpowers/brainstorm/73488-1790309146/content/home-layout-comparison.html",
+    "destination": "docs/archive/brainstorm/73488-1790309146/content/home-layout-comparison.html",
+    "source_sha256": "58fd47dae0398fc75654c8a286e9a600730213276a5eacc23a09b57037a70bdc",
+    "destination_sha256": "58fd47dae0398fc75654c8a286e9a600730213276a5eacc23a09b57037a70bdc"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/.superpowers/brainstorm/73488-1790309146/content/home-layout-confirmed.html",
+    "destination": "docs/archive/brainstorm/73488-1790309146/content/home-layout-confirmed.html",
+    "source_sha256": "38857f76e66f79f0cca14d19a8d0b2c3f2805e69c8d2dba1d1741c856418d1e2",
+    "destination_sha256": "38857f76e66f79f0cca14d19a8d0b2c3f2805e69c8d2dba1d1741c856418d1e2"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/.superpowers/brainstorm/73488-1790309146/content/solution-research-composite.html",
+    "destination": "docs/archive/brainstorm/73488-1790309146/content/solution-research-composite.html",
+    "source_sha256": "644d931ea9a9ed312c14ce76afb8af4e42ded8f1e78840f3b4e95eda562b0139",
+    "destination_sha256": "644d931ea9a9ed312c14ce76afb8af4e42ded8f1e78840f3b4e95eda562b0139"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/.superpowers/brainstorm/73488-1790309146/content/solution-synthesis-v2.html",
+    "destination": "docs/archive/brainstorm/73488-1790309146/content/solution-synthesis-v2.html",
+    "source_sha256": "4ba0d69a8f7044115c6713de8e6a0b88dbbccb0b8bcb8928ff8f9d73d5a6fd59",
+    "destination_sha256": "4ba0d69a8f7044115c6713de8e6a0b88dbbccb0b8bcb8928ff8f9d73d5a6fd59"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/.superpowers/brainstorm/73488-1790309146/content/visual-asymmetric-scene.html",
+    "destination": "docs/archive/brainstorm/73488-1790309146/content/visual-asymmetric-scene.html",
+    "source_sha256": "0d4ad959a99d916d89a378fe512c3bde49d34f3d7a0a1ef9f56fb68a0edd6d3d",
+    "destination_sha256": "0d4ad959a99d916d89a378fe512c3bde49d34f3d7a0a1ef9f56fb68a0edd6d3d"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/.superpowers/brainstorm/73488-1790309146/content/visual-intensity-comparison.html",
+    "destination": "docs/archive/brainstorm/73488-1790309146/content/visual-intensity-comparison.html",
+    "source_sha256": "b7710ecab9062380405c1ab81d7950f6960908c56ee6433280c861cf1b68b87b",
+    "destination_sha256": "b7710ecab9062380405c1ab81d7950f6960908c56ee6433280c861cf1b68b87b"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/.superpowers/brainstorm/73488-1790309146/content/visual-modern-character.html",
+    "destination": "docs/archive/brainstorm/73488-1790309146/content/visual-modern-character.html",
+    "source_sha256": "f73aefee9b135abed499df84af83705adc25ee91c7876fe002bda03b92d71b52",
+    "destination_sha256": "f73aefee9b135abed499df84af83705adc25ee91c7876fe002bda03b92d71b52"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/.superpowers/brainstorm/73488-1790309146/content/visual-open-canvas.html",
+    "destination": "docs/archive/brainstorm/73488-1790309146/content/visual-open-canvas.html",
+    "source_sha256": "e3ae21a5b801fa1f751990cf69925848437e594647dc0353b5d47c8ac4292152",
+    "destination_sha256": "e3ae21a5b801fa1f751990cf69925848437e594647dc0353b5d47c8ac4292152"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/.superpowers/brainstorm/73488-1790309146/content/visual-scene-led.html",
+    "destination": "docs/archive/brainstorm/73488-1790309146/content/visual-scene-led.html",
+    "source_sha256": "b746045453a76006e56fe8c50e8dc930ab62e211d863d4c39b3793a8eb13cc41",
+    "destination_sha256": "b746045453a76006e56fe8c50e8dc930ab62e211d863d4c39b3793a8eb13cc41"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/design-system/personal-knowledge-hub/MASTER.md",
+    "destination": "docs/design/design-system/personal-knowledge-hub/MASTER.md",
+    "source_sha256": "4f12ba76af1554ba32cccee4906f758ff2e7a53370f334543c572563d4fe3fc6",
+    "destination_sha256": "4f12ba76af1554ba32cccee4906f758ff2e7a53370f334543c572563d4fe3fc6"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/design-system/personal-knowledge-hub/current-baseline.md",
+    "destination": "docs/design/design-system/personal-knowledge-hub/current-baseline.md",
+    "source_sha256": "06ac0bab0ad870807217bbfbc943e000deded7293027b5d1d750d0382c96e4a1",
+    "destination_sha256": "06ac0bab0ad870807217bbfbc943e000deded7293027b5d1d750d0382c96e4a1"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/design-system/personal-knowledge-hub/pages/content-detail.md",
+    "destination": "docs/design/design-system/personal-knowledge-hub/pages/content-detail.md",
+    "source_sha256": "22dfd400a571de65ea2604450c162cac3cd7e6c7e1531bd3ac14482b8e348a5e",
+    "destination_sha256": "22dfd400a571de65ea2604450c162cac3cd7e6c7e1531bd3ac14482b8e348a5e"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/design-system/personal-knowledge-hub/pages/editor.md",
+    "destination": "docs/design/design-system/personal-knowledge-hub/pages/editor.md",
+    "source_sha256": "6b1b350718cce0972b049addda40ac6fc3645e0fea6151580856cc7ade653fbb",
+    "destination_sha256": "6b1b350718cce0972b049addda40ac6fc3645e0fea6151580856cc7ade653fbb"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/design-system/personal-knowledge-hub/pages/home.md",
+    "destination": "docs/design/design-system/personal-knowledge-hub/pages/home.md",
+    "source_sha256": "abe68185133c0968da92ba59c340224fdf8d4b44fde9ad63869005aa96e0188b",
+    "destination_sha256": "abe68185133c0968da92ba59c340224fdf8d4b44fde9ad63869005aa96e0188b"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/design-system/personal-knowledge-hub/pages/navigation.md",
+    "destination": "docs/design/design-system/personal-knowledge-hub/pages/navigation.md",
+    "source_sha256": "be5f802ed9f45a21e9b28c708bff1403b1f2ae2566e6b218367bbdb4231cd2f6",
+    "destination_sha256": "be5f802ed9f45a21e9b28c708bff1403b1f2ae2566e6b218367bbdb4231cd2f6"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/design-system/personal-knowledge-hub/pages/search.md",
+    "destination": "docs/design/design-system/personal-knowledge-hub/pages/search.md",
+    "source_sha256": "c2a688ab8a6a6f057d57e8ad4041023e112f7e6b5de713516925a2942ff9fd6a",
+    "destination_sha256": "c2a688ab8a6a6f057d57e8ad4041023e112f7e6b5de713516925a2942ff9fd6a"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/design-system/personal-knowledge-hub/pages/site-sections.md",
+    "destination": "docs/design/design-system/personal-knowledge-hub/pages/site-sections.md",
+    "source_sha256": "6de1ea51ca41ef8b6426de841c84283dd412c902d48e8970281cabbb3b5643f8",
+    "destination_sha256": "6de1ea51ca41ef8b6426de841c84283dd412c902d48e8970281cabbb3b5643f8"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/design-system/personal-knowledge-hub/pages/workspace.md",
+    "destination": "docs/design/design-system/personal-knowledge-hub/pages/workspace.md",
+    "source_sha256": "7ec08dc0c3fc05de8856d3dc20388e6f8c1be82829fb119d042c6abfa9579afa",
+    "destination_sha256": "7ec08dc0c3fc05de8856d3dc20388e6f8c1be82829fb119d042c6abfa9579afa"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/conflict-desktop-dark.png",
+    "destination": "docs/design/outputs/visual-v1/conflict-desktop-dark.png",
+    "source_sha256": "98785a70fbc8b41c21e26d316594e1037a73e22629e0574039b3e9dfe12b5cee",
+    "destination_sha256": "98785a70fbc8b41c21e26d316594e1037a73e22629e0574039b3e9dfe12b5cee"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/conflict-desktop-light.png",
+    "destination": "docs/design/outputs/visual-v1/conflict-desktop-light.png",
+    "source_sha256": "16331fb81a315afd8b3137a4a74debe1dd01224069cbc4996c4d0a2894da21dc",
+    "destination_sha256": "16331fb81a315afd8b3137a4a74debe1dd01224069cbc4996c4d0a2894da21dc"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/conflict-mobile-dark.png",
+    "destination": "docs/design/outputs/visual-v1/conflict-mobile-dark.png",
+    "source_sha256": "ad6f5df49157e314240f535639eb7daed7a29ce681d913346c899acf2abda6b2",
+    "destination_sha256": "ad6f5df49157e314240f535639eb7daed7a29ce681d913346c899acf2abda6b2"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/conflict-mobile-light.png",
+    "destination": "docs/design/outputs/visual-v1/conflict-mobile-light.png",
+    "source_sha256": "df829b37d476dc6e47399cf18d033ccf68e263699bac7292bf223dc6651a6602",
+    "destination_sha256": "df829b37d476dc6e47399cf18d033ccf68e263699bac7292bf223dc6651a6602"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/content-list-desktop-dark.png",
+    "destination": "docs/design/outputs/visual-v1/content-list-desktop-dark.png",
+    "source_sha256": "1c242d953e0bebc2a9790f43889ab131177362b13d7bc733a3f8cf610f27710f",
+    "destination_sha256": "1c242d953e0bebc2a9790f43889ab131177362b13d7bc733a3f8cf610f27710f"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/content-list-desktop-light.png",
+    "destination": "docs/design/outputs/visual-v1/content-list-desktop-light.png",
+    "source_sha256": "c4a29656255389b19fb38b073e3a8b7066edfad475361a5b1f4e1a272b07517f",
+    "destination_sha256": "c4a29656255389b19fb38b073e3a8b7066edfad475361a5b1f4e1a272b07517f"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/content-list-mobile-dark.png",
+    "destination": "docs/design/outputs/visual-v1/content-list-mobile-dark.png",
+    "source_sha256": "33ee8d2df9bd1ad7409d5f93f1817e3b46c85b5aebed74d2dbfefa86fba855aa",
+    "destination_sha256": "33ee8d2df9bd1ad7409d5f93f1817e3b46c85b5aebed74d2dbfefa86fba855aa"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/content-list-mobile-light.png",
+    "destination": "docs/design/outputs/visual-v1/content-list-mobile-light.png",
+    "source_sha256": "df593f60893d7badbfe47247f19b6e77168afe9e2e6074a49e0273eafdd2f479",
+    "destination_sha256": "df593f60893d7badbfe47247f19b6e77168afe9e2e6074a49e0273eafdd2f479"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/detail-desktop-dark.png",
+    "destination": "docs/design/outputs/visual-v1/detail-desktop-dark.png",
+    "source_sha256": "3625c6e37ee17b5aa46dbeba92be159bc022596c71e874984d73da7bc98e8c66",
+    "destination_sha256": "3625c6e37ee17b5aa46dbeba92be159bc022596c71e874984d73da7bc98e8c66"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/detail-desktop-light.png",
+    "destination": "docs/design/outputs/visual-v1/detail-desktop-light.png",
+    "source_sha256": "31867aefb6016496c15f4d1d587091a59e27bc3d0d6f3c1dce8eedfcd0b30212",
+    "destination_sha256": "31867aefb6016496c15f4d1d587091a59e27bc3d0d6f3c1dce8eedfcd0b30212"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/detail-mobile-dark.png",
+    "destination": "docs/design/outputs/visual-v1/detail-mobile-dark.png",
+    "source_sha256": "410d79408bb3703494e4863b4f5097eabc36a3560655b5c2c614f3d8af87c798",
+    "destination_sha256": "410d79408bb3703494e4863b4f5097eabc36a3560655b5c2c614f3d8af87c798"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/detail-mobile-light.png",
+    "destination": "docs/design/outputs/visual-v1/detail-mobile-light.png",
+    "source_sha256": "ed42e8c8743559771b47a3da6c13d3b31bdba05de748bd953d7d51dd8b2dbb26",
+    "destination_sha256": "ed42e8c8743559771b47a3da6c13d3b31bdba05de748bd953d7d51dd8b2dbb26"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/editor-desktop-dark.png",
+    "destination": "docs/design/outputs/visual-v1/editor-desktop-dark.png",
+    "source_sha256": "5b36c8c07b8d78327fc06c6d59a7960605a188e0d147049c9c8e2c8ff8d8b897",
+    "destination_sha256": "5b36c8c07b8d78327fc06c6d59a7960605a188e0d147049c9c8e2c8ff8d8b897"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/editor-desktop-light.png",
+    "destination": "docs/design/outputs/visual-v1/editor-desktop-light.png",
+    "source_sha256": "d2c31425068c9cf862d587f820b91ae9e3989eee04183e35f09387ae620463b4",
+    "destination_sha256": "d2c31425068c9cf862d587f820b91ae9e3989eee04183e35f09387ae620463b4"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/editor-mobile-dark.png",
+    "destination": "docs/design/outputs/visual-v1/editor-mobile-dark.png",
+    "source_sha256": "e18f80e6d0609dc751165b3ad856bb3adb55da9e79a0faaa3b6e3c1d2931b11d",
+    "destination_sha256": "e18f80e6d0609dc751165b3ad856bb3adb55da9e79a0faaa3b6e3c1d2931b11d"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/editor-mobile-light.png",
+    "destination": "docs/design/outputs/visual-v1/editor-mobile-light.png",
+    "source_sha256": "6ea0be304ac6ceefbfbf1ca56091fea6f62bafd339a279cf038a993724cd73b7",
+    "destination_sha256": "6ea0be304ac6ceefbfbf1ca56091fea6f62bafd339a279cf038a993724cd73b7"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/home-desktop-dark.png",
+    "destination": "docs/design/outputs/visual-v1/home-desktop-dark.png",
+    "source_sha256": "9889f8a59be800b78db3e739cace17d3393036478becc283cc0bb65d32ab375f",
+    "destination_sha256": "9889f8a59be800b78db3e739cace17d3393036478becc283cc0bb65d32ab375f"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/home-desktop-light.png",
+    "destination": "docs/design/outputs/visual-v1/home-desktop-light.png",
+    "source_sha256": "5d873d058429077af2e842cb1b824be0e0c2b4adee9364aba3da27c5065f4f7f",
+    "destination_sha256": "5d873d058429077af2e842cb1b824be0e0c2b4adee9364aba3da27c5065f4f7f"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/home-firstfold-dark.png",
+    "destination": "docs/design/outputs/visual-v1/home-firstfold-dark.png",
+    "source_sha256": "6e0dd8d7e688186776b828179972d6aa9116e0204d58b46b0e477f20d1f1a3e9",
+    "destination_sha256": "6e0dd8d7e688186776b828179972d6aa9116e0204d58b46b0e477f20d1f1a3e9"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/home-firstfold-light.png",
+    "destination": "docs/design/outputs/visual-v1/home-firstfold-light.png",
+    "source_sha256": "ea019b47d13d72ffb479d2c438fd47d8d438f60f7eb83986ffc7ec13485ac286",
+    "destination_sha256": "ea019b47d13d72ffb479d2c438fd47d8d438f60f7eb83986ffc7ec13485ac286"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/home-mobile-dark.png",
+    "destination": "docs/design/outputs/visual-v1/home-mobile-dark.png",
+    "source_sha256": "092801b1c12b4275e757843d2cdd94c0dfa4b44bf508c27cebbd594daf733297",
+    "destination_sha256": "092801b1c12b4275e757843d2cdd94c0dfa4b44bf508c27cebbd594daf733297"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/home-mobile-light.png",
+    "destination": "docs/design/outputs/visual-v1/home-mobile-light.png",
+    "source_sha256": "cf390151c7cb9ce5a995107a93fcef57d7d9046ecfd7762daa9e01c748d01642",
+    "destination_sha256": "cf390151c7cb9ce5a995107a93fcef57d7d9046ecfd7762daa9e01c748d01642"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/login-desktop-dark.png",
+    "destination": "docs/design/outputs/visual-v1/login-desktop-dark.png",
+    "source_sha256": "ff3fb8728d4f40309d572db14af1954abba9f2004dad25ba5a2086194266bbbb",
+    "destination_sha256": "ff3fb8728d4f40309d572db14af1954abba9f2004dad25ba5a2086194266bbbb"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/login-desktop-light.png",
+    "destination": "docs/design/outputs/visual-v1/login-desktop-light.png",
+    "source_sha256": "1f1b74db46c8b898e206cb513c2ff56db732ce92b8f12d264a859026abc5fa0f",
+    "destination_sha256": "1f1b74db46c8b898e206cb513c2ff56db732ce92b8f12d264a859026abc5fa0f"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/login-mobile-dark.png",
+    "destination": "docs/design/outputs/visual-v1/login-mobile-dark.png",
+    "source_sha256": "00266998f96ce8cfd15d4d1a37a84c42435aa2a0eedea59572212749b34ad5fc",
+    "destination_sha256": "00266998f96ce8cfd15d4d1a37a84c42435aa2a0eedea59572212749b34ad5fc"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/login-mobile-light.png",
+    "destination": "docs/design/outputs/visual-v1/login-mobile-light.png",
+    "source_sha256": "0ed3fefa563e9ab876526ae472ff5755cb5bc5ed83b85d0d0f858cea1732ca04",
+    "destination_sha256": "0ed3fefa563e9ab876526ae472ff5755cb5bc5ed83b85d0d0f858cea1732ca04"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/manifest.json",
+    "destination": "docs/design/outputs/visual-v1/manifest.json",
+    "source_sha256": "1460c0249cb0a9f772b8798cbb9463e93355e24cb32e815848eed13bdd47222f",
+    "destination_sha256": "1460c0249cb0a9f772b8798cbb9463e93355e24cb32e815848eed13bdd47222f"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/media-desktop-dark.png",
+    "destination": "docs/design/outputs/visual-v1/media-desktop-dark.png",
+    "source_sha256": "206cf3a423868a66de9ff10028e7815bf3fcb31b3f30bd8713036da9b5f43628",
+    "destination_sha256": "206cf3a423868a66de9ff10028e7815bf3fcb31b3f30bd8713036da9b5f43628"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/media-desktop-light.png",
+    "destination": "docs/design/outputs/visual-v1/media-desktop-light.png",
+    "source_sha256": "2d1db5515d39bf23239712b7d0881e773cf0ac84bba51e74ef54d0b2d18cda44",
+    "destination_sha256": "2d1db5515d39bf23239712b7d0881e773cf0ac84bba51e74ef54d0b2d18cda44"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/media-mobile-dark.png",
+    "destination": "docs/design/outputs/visual-v1/media-mobile-dark.png",
+    "source_sha256": "8bfbba470026c614435fc5e9e42156cbb61888c1da02ee6762dcda1e8cd80f47",
+    "destination_sha256": "8bfbba470026c614435fc5e9e42156cbb61888c1da02ee6762dcda1e8cd80f47"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/media-mobile-light.png",
+    "destination": "docs/design/outputs/visual-v1/media-mobile-light.png",
+    "source_sha256": "21604ce7762e11c92054a00c4e933ae7718d24eb1da9d0a51249b554f68a2bb9",
+    "destination_sha256": "21604ce7762e11c92054a00c4e933ae7718d24eb1da9d0a51249b554f68a2bb9"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/overview-home.png",
+    "destination": "docs/design/outputs/visual-v1/overview-home.png",
+    "source_sha256": "bb9681e12838a731768843a11c37d36e789eff96aeee22d4555757f47ebfa72b",
+    "destination_sha256": "bb9681e12838a731768843a11c37d36e789eff96aeee22d4555757f47ebfa72b"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/overview-public.png",
+    "destination": "docs/design/outputs/visual-v1/overview-public.png",
+    "source_sha256": "b0e500d5a178af4bdd1f1af72bcd2268f043812cedb1d38be3ba931d386165a1",
+    "destination_sha256": "b0e500d5a178af4bdd1f1af72bcd2268f043812cedb1d38be3ba931d386165a1"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/overview-workspace.png",
+    "destination": "docs/design/outputs/visual-v1/overview-workspace.png",
+    "source_sha256": "c4020e3b0d78902cd7bff053befd39d7a48d93ae6a0406a03e0bd6115626b09d",
+    "destination_sha256": "c4020e3b0d78902cd7bff053befd39d7a48d93ae6a0406a03e0bd6115626b09d"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/preview-home.png",
+    "destination": "docs/design/outputs/visual-v1/preview-home.png",
+    "source_sha256": "3d0d61eb209aa73f7b19ffbf18c35061e8dd85e20304db1bcf74eaddccc4ac94",
+    "destination_sha256": "3d0d61eb209aa73f7b19ffbf18c35061e8dd85e20304db1bcf74eaddccc4ac94"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/publish-desktop-dark.png",
+    "destination": "docs/design/outputs/visual-v1/publish-desktop-dark.png",
+    "source_sha256": "8fd92238bc888f1bef822279451b7fb328a15d242afabb772c8d7be57740f281",
+    "destination_sha256": "8fd92238bc888f1bef822279451b7fb328a15d242afabb772c8d7be57740f281"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/publish-desktop-light.png",
+    "destination": "docs/design/outputs/visual-v1/publish-desktop-light.png",
+    "source_sha256": "be1aaea3e1ab1a0cc907b50b3ceca93350077e716f46bab6f2f2cba04b57e71f",
+    "destination_sha256": "be1aaea3e1ab1a0cc907b50b3ceca93350077e716f46bab6f2f2cba04b57e71f"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/publish-mobile-dark.png",
+    "destination": "docs/design/outputs/visual-v1/publish-mobile-dark.png",
+    "source_sha256": "ebddbebcdbdab465cf5e1505d3465f6ba15bfd872ae43651441148fffd12cb63",
+    "destination_sha256": "ebddbebcdbdab465cf5e1505d3465f6ba15bfd872ae43651441148fffd12cb63"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/publish-mobile-light.png",
+    "destination": "docs/design/outputs/visual-v1/publish-mobile-light.png",
+    "source_sha256": "e98e0fb884c1bbedbefcd24aace7746ea11f2da7fadc9edf4c366e32219f297e",
+    "destination_sha256": "e98e0fb884c1bbedbefcd24aace7746ea11f2da7fadc9edf4c366e32219f297e"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/search-desktop-dark.png",
+    "destination": "docs/design/outputs/visual-v1/search-desktop-dark.png",
+    "source_sha256": "efa58d2adc1c2bcbe197e575c308cf5f1ad93a269212e48496a27b45a947f657",
+    "destination_sha256": "efa58d2adc1c2bcbe197e575c308cf5f1ad93a269212e48496a27b45a947f657"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/search-desktop-light.png",
+    "destination": "docs/design/outputs/visual-v1/search-desktop-light.png",
+    "source_sha256": "0652b94f1c2bf4cc5074871ec3d21863f5e093c6e71db1969c2bc5af01ff6704",
+    "destination_sha256": "0652b94f1c2bf4cc5074871ec3d21863f5e093c6e71db1969c2bc5af01ff6704"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/search-empty-desktop-dark.png",
+    "destination": "docs/design/outputs/visual-v1/search-empty-desktop-dark.png",
+    "source_sha256": "e5c2eb0776994470d0f1a2a433a4e9226820658e17085c2d48b0b6177cd6debb",
+    "destination_sha256": "e5c2eb0776994470d0f1a2a433a4e9226820658e17085c2d48b0b6177cd6debb"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/search-empty-desktop-light.png",
+    "destination": "docs/design/outputs/visual-v1/search-empty-desktop-light.png",
+    "source_sha256": "08b8ca913bf14e86baf26696bd972415c138d544c88688d6f6275e629cc3ee16",
+    "destination_sha256": "08b8ca913bf14e86baf26696bd972415c138d544c88688d6f6275e629cc3ee16"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/search-empty-mobile-dark.png",
+    "destination": "docs/design/outputs/visual-v1/search-empty-mobile-dark.png",
+    "source_sha256": "c81bfd20b3be76f04023b1cd1562e8c97c4ac6a2f57b844015b35863fd122c22",
+    "destination_sha256": "c81bfd20b3be76f04023b1cd1562e8c97c4ac6a2f57b844015b35863fd122c22"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/search-empty-mobile-light.png",
+    "destination": "docs/design/outputs/visual-v1/search-empty-mobile-light.png",
+    "source_sha256": "47222a1809ee54fffe91e5cf5b1c58d72a048c87e8363800f7c92177cbf4ffaa",
+    "destination_sha256": "47222a1809ee54fffe91e5cf5b1c58d72a048c87e8363800f7c92177cbf4ffaa"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/search-error-desktop-dark.png",
+    "destination": "docs/design/outputs/visual-v1/search-error-desktop-dark.png",
+    "source_sha256": "6675fe219628b13182961d17a91d9e8894ee0653b70647fb30b036fa19950c4f",
+    "destination_sha256": "6675fe219628b13182961d17a91d9e8894ee0653b70647fb30b036fa19950c4f"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/search-error-desktop-light.png",
+    "destination": "docs/design/outputs/visual-v1/search-error-desktop-light.png",
+    "source_sha256": "7b6eceafdc538129e4c9bc49d0af7cd6ad022fc24ca7c636ef89862d2a0aaff2",
+    "destination_sha256": "7b6eceafdc538129e4c9bc49d0af7cd6ad022fc24ca7c636ef89862d2a0aaff2"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/search-error-mobile-dark.png",
+    "destination": "docs/design/outputs/visual-v1/search-error-mobile-dark.png",
+    "source_sha256": "1512a93bbeb26658a3de2f78187ac8f0da3f7c3db37a35200d76caca571810bd",
+    "destination_sha256": "1512a93bbeb26658a3de2f78187ac8f0da3f7c3db37a35200d76caca571810bd"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/search-error-mobile-light.png",
+    "destination": "docs/design/outputs/visual-v1/search-error-mobile-light.png",
+    "source_sha256": "167b34cfed11db609360f33fe93a22b778020638c9fae8cf1e737cb9675f63fe",
+    "destination_sha256": "167b34cfed11db609360f33fe93a22b778020638c9fae8cf1e737cb9675f63fe"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/search-mobile-dark.png",
+    "destination": "docs/design/outputs/visual-v1/search-mobile-dark.png",
+    "source_sha256": "e0cae339511bb90eb4c930df4a15e2c8cb074aeadfe91593c95f746daa7e0e6a",
+    "destination_sha256": "e0cae339511bb90eb4c930df4a15e2c8cb074aeadfe91593c95f746daa7e0e6a"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/search-mobile-light.png",
+    "destination": "docs/design/outputs/visual-v1/search-mobile-light.png",
+    "source_sha256": "59900976f7abb92e79a53f1f5a2a582933e887779da9d56a9f694bf10d18c403",
+    "destination_sha256": "59900976f7abb92e79a53f1f5a2a582933e887779da9d56a9f694bf10d18c403"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/workspace-desktop-dark.png",
+    "destination": "docs/design/outputs/visual-v1/workspace-desktop-dark.png",
+    "source_sha256": "61d1726c490873330b6c81e2161ff544f3f262b53149d0ac320a43ff2cc3928a",
+    "destination_sha256": "61d1726c490873330b6c81e2161ff544f3f262b53149d0ac320a43ff2cc3928a"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/workspace-desktop-light.png",
+    "destination": "docs/design/outputs/visual-v1/workspace-desktop-light.png",
+    "source_sha256": "86cb0425a6829db822cd9789cac785df803e5f73e289d7ea313b905a4c53cb60",
+    "destination_sha256": "86cb0425a6829db822cd9789cac785df803e5f73e289d7ea313b905a4c53cb60"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/workspace-mobile-dark.png",
+    "destination": "docs/design/outputs/visual-v1/workspace-mobile-dark.png",
+    "source_sha256": "36e18cfab127972a0d16baeef9f145f2610ad77520444e913062b0dc934d08c7",
+    "destination_sha256": "36e18cfab127972a0d16baeef9f145f2610ad77520444e913062b0dc934d08c7"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v1/workspace-mobile-light.png",
+    "destination": "docs/design/outputs/visual-v1/workspace-mobile-light.png",
+    "source_sha256": "fce29a72ab8ddccf4611a89702cec0e6d629e4c6aacec020546891aa142fe51e",
+    "destination_sha256": "fce29a72ab8ddccf4611a89702cec0e6d629e4c6aacec020546891aa142fe51e"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/about-1440-light.png",
+    "destination": "docs/design/outputs/visual-v2/about-1440-light.png",
+    "source_sha256": "418adb2c96332d32e10feb1b802719170721495ebab3b8a6d59724afd1c54942",
+    "destination_sha256": "418adb2c96332d32e10feb1b802719170721495ebab3b8a6d59724afd1c54942"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/about-375-light.png",
+    "destination": "docs/design/outputs/visual-v2/about-375-light.png",
+    "source_sha256": "c16a6945471e01c55865f4a65d8f4551dee76c1113a57738a38eca7f3c1b70e3",
+    "destination_sha256": "c16a6945471e01c55865f4a65d8f4551dee76c1113a57738a38eca7f3c1b70e3"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/articles-1440-light.png",
+    "destination": "docs/design/outputs/visual-v2/articles-1440-light.png",
+    "source_sha256": "b1ec5d4ccd911583c3b996f557282bc97290d76b78c1b392201ca5fcfc5f736b",
+    "destination_sha256": "b1ec5d4ccd911583c3b996f557282bc97290d76b78c1b392201ca5fcfc5f736b"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/articles-375-light.png",
+    "destination": "docs/design/outputs/visual-v2/articles-375-light.png",
+    "source_sha256": "a36ecf3877e81eb60c9565464231b77c279f8073a64bfdfffb79b6d20e14d2ad",
+    "destination_sha256": "a36ecf3877e81eb60c9565464231b77c279f8073a64bfdfffb79b6d20e14d2ad"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/comments-1440-light.png",
+    "destination": "docs/design/outputs/visual-v2/comments-1440-light.png",
+    "source_sha256": "f211989d4759513834de620e8b5083c7f2faa4a09e1981b1723a0d58425f3a60",
+    "destination_sha256": "f211989d4759513834de620e8b5083c7f2faa4a09e1981b1723a0d58425f3a60"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/comments-375-light.png",
+    "destination": "docs/design/outputs/visual-v2/comments-375-light.png",
+    "source_sha256": "f4485634a27c734ed689ddb0f92a9592b08d4d2c19ce73e9edce909b10a4b72d",
+    "destination_sha256": "f4485634a27c734ed689ddb0f92a9592b08d4d2c19ce73e9edce909b10a4b72d"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/controls-375-dark.png",
+    "destination": "docs/design/outputs/visual-v2/controls-375-dark.png",
+    "source_sha256": "03d5539eff0cd76ddb70cb6f74b4444a4d1b8d2e4d7bd060a957f2959cc09127",
+    "destination_sha256": "03d5539eff0cd76ddb70cb6f74b4444a4d1b8d2e4d7bd060a957f2959cc09127"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/controls-375-light.png",
+    "destination": "docs/design/outputs/visual-v2/controls-375-light.png",
+    "source_sha256": "75f475d0497b5d263790edf35ed130fe2584420d5ba9f6486117db3c0c3c1b3c",
+    "destination_sha256": "75f475d0497b5d263790edf35ed130fe2584420d5ba9f6486117db3c0c3c1b3c"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/home-boundary-1099-light.png",
+    "destination": "docs/design/outputs/visual-v2/home-boundary-1099-light.png",
+    "source_sha256": "f15e77f8e8de494ee9f4b7c7627d9ef988e8470bf03a9d92df926c33a65d766e",
+    "destination_sha256": "f15e77f8e8de494ee9f4b7c7627d9ef988e8470bf03a9d92df926c33a65d766e"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/home-boundary-1100-light.png",
+    "destination": "docs/design/outputs/visual-v2/home-boundary-1100-light.png",
+    "source_sha256": "20bb68670fa91b25a2b26905a95fe76175365585a537b4ac110e5920538e2814",
+    "destination_sha256": "20bb68670fa91b25a2b26905a95fe76175365585a537b4ac110e5920538e2814"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/home-boundary-320-light.png",
+    "destination": "docs/design/outputs/visual-v2/home-boundary-320-light.png",
+    "source_sha256": "e46ccc942359e5a40e077f60cf999770ba6f7476c5548f784c535b804faf43f2",
+    "destination_sha256": "e46ccc942359e5a40e077f60cf999770ba6f7476c5548f784c535b804faf43f2"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/home-boundary-768-light.png",
+    "destination": "docs/design/outputs/visual-v2/home-boundary-768-light.png",
+    "source_sha256": "8e5881d324d6c718c08ff2fe8ae0c6fd83f874ed42b498501a81b9af80a35e57",
+    "destination_sha256": "8e5881d324d6c718c08ff2fe8ae0c6fd83f874ed42b498501a81b9af80a35e57"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/manifest.json",
+    "destination": "docs/design/outputs/visual-v2/manifest.json",
+    "source_sha256": "1cd9eef0e29416e27b50e389e04f6ad350b414f20a343f0dcf8b8e6195bd9942",
+    "destination_sha256": "1cd9eef0e29416e27b50e389e04f6ad350b414f20a343f0dcf8b8e6195bd9942"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/mobile-menu-375-dark.png",
+    "destination": "docs/design/outputs/visual-v2/mobile-menu-375-dark.png",
+    "source_sha256": "c932a3ede31e95c7f483f359f5e5415b69322234620a9dbc619e766161c740e0",
+    "destination_sha256": "c932a3ede31e95c7f483f359f5e5415b69322234620a9dbc619e766161c740e0"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/mobile-menu-375-light.png",
+    "destination": "docs/design/outputs/visual-v2/mobile-menu-375-light.png",
+    "source_sha256": "d5123dd10c9536ef8e18dd601af31eb60610f0d52ad1cdc09c2f76306c477f9f",
+    "destination_sha256": "d5123dd10c9536ef8e18dd601af31eb60610f0d52ad1cdc09c2f76306c477f9f"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/moments-1440-light.png",
+    "destination": "docs/design/outputs/visual-v2/moments-1440-light.png",
+    "source_sha256": "7a42997270b062577313e1b4b77b6b034b9a4de6812305e1e008b4d0c2c7deec",
+    "destination_sha256": "7a42997270b062577313e1b4b77b6b034b9a4de6812305e1e008b4d0c2c7deec"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/moments-375-light.png",
+    "destination": "docs/design/outputs/visual-v2/moments-375-light.png",
+    "source_sha256": "c2e4775d488fe3b2693ff13437a3d92054268a3aa040d4ec73edd5e943efa7c6",
+    "destination_sha256": "c2e4775d488fe3b2693ff13437a3d92054268a3aa040d4ec73edd5e943efa7c6"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/not-found-1440-light.png",
+    "destination": "docs/design/outputs/visual-v2/not-found-1440-light.png",
+    "source_sha256": "d4b51db9cbf2b8a62373b4a540e05cf4a5309edf7b2eade633c9aa9589056eb2",
+    "destination_sha256": "d4b51db9cbf2b8a62373b4a540e05cf4a5309edf7b2eade633c9aa9589056eb2"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/not-found-375-light.png",
+    "destination": "docs/design/outputs/visual-v2/not-found-375-light.png",
+    "source_sha256": "534aa254c5e448a1132dd9f00ba4a655c8765a69c8a83004324bacc3b21dec62",
+    "destination_sha256": "534aa254c5e448a1132dd9f00ba4a655c8765a69c8a83004324bacc3b21dec62"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/overview-admin.png",
+    "destination": "docs/design/outputs/visual-v2/overview-admin.png",
+    "source_sha256": "6d1178dc34d3ff2e992ec71ea0b67c70797fe45dad4c325336d0b75a09bb5841",
+    "destination_sha256": "6d1178dc34d3ff2e992ec71ea0b67c70797fe45dad4c325336d0b75a09bb5841"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/overview-boundaries.png",
+    "destination": "docs/design/outputs/visual-v2/overview-boundaries.png",
+    "source_sha256": "34cbf849085513f2fc97be94815495c7de92ea976d0b8f2ce0c50e01538f2551",
+    "destination_sha256": "34cbf849085513f2fc97be94815495c7de92ea976d0b8f2ce0c50e01538f2551"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/overview-public.png",
+    "destination": "docs/design/outputs/visual-v2/overview-public.png",
+    "source_sha256": "80fd082337f5223d3bad5f5b0bd2c1e608453e9885dde2942d0796aa19e910c4",
+    "destination_sha256": "80fd082337f5223d3bad5f5b0bd2c1e608453e9885dde2942d0796aa19e910c4"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/privacy-1440-light.png",
+    "destination": "docs/design/outputs/visual-v2/privacy-1440-light.png",
+    "source_sha256": "63bdece61e3a8f1afe623b6da2bcfb3abfdaf97ed312f3380b529e8a2dd8e723",
+    "destination_sha256": "63bdece61e3a8f1afe623b6da2bcfb3abfdaf97ed312f3380b529e8a2dd8e723"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/privacy-375-light.png",
+    "destination": "docs/design/outputs/visual-v2/privacy-375-light.png",
+    "source_sha256": "09497eef4bf07741399ec837388d4fce43f38e4cf9466f063a8304e51746cbe3",
+    "destination_sha256": "09497eef4bf07741399ec837388d4fce43f38e4cf9466f063a8304e51746cbe3"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/project-detail-1440-light.png",
+    "destination": "docs/design/outputs/visual-v2/project-detail-1440-light.png",
+    "source_sha256": "171731521764a4f051eb9796bba0e0dd37269e6248716db2bd551f391361c074",
+    "destination_sha256": "171731521764a4f051eb9796bba0e0dd37269e6248716db2bd551f391361c074"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/project-detail-375-light.png",
+    "destination": "docs/design/outputs/visual-v2/project-detail-375-light.png",
+    "source_sha256": "e8aba237ece980c97a74cb2ec9781a07a1787bb69697156b1a47432230ef943d",
+    "destination_sha256": "e8aba237ece980c97a74cb2ec9781a07a1787bb69697156b1a47432230ef943d"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/projects-1440-light.png",
+    "destination": "docs/design/outputs/visual-v2/projects-1440-light.png",
+    "source_sha256": "375f0a1a2c2ffed9f80ec90d439797ae0efed2ca4bea18a585eb5d486cce5f27",
+    "destination_sha256": "375f0a1a2c2ffed9f80ec90d439797ae0efed2ca4bea18a585eb5d486cce5f27"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/projects-375-light.png",
+    "destination": "docs/design/outputs/visual-v2/projects-375-light.png",
+    "source_sha256": "6c7434b5291f6b68c1a7b32e918f94943143281b8abb7b7d7ff2c04f5326e413",
+    "destination_sha256": "6c7434b5291f6b68c1a7b32e918f94943143281b8abb7b7d7ff2c04f5326e413"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/resource-detail-1440-light.png",
+    "destination": "docs/design/outputs/visual-v2/resource-detail-1440-light.png",
+    "source_sha256": "be846fe2fe51f23750a2724628962711b78bd99f696227a59ff943b5d77fedd7",
+    "destination_sha256": "be846fe2fe51f23750a2724628962711b78bd99f696227a59ff943b5d77fedd7"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/resource-detail-375-light.png",
+    "destination": "docs/design/outputs/visual-v2/resource-detail-375-light.png",
+    "source_sha256": "f533cbd6dba0d453c2c20e966b8475882669ed303625835cae086c443ab0204e",
+    "destination_sha256": "f533cbd6dba0d453c2c20e966b8475882669ed303625835cae086c443ab0204e"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/resources-1440-light.png",
+    "destination": "docs/design/outputs/visual-v2/resources-1440-light.png",
+    "source_sha256": "12d6c39597b649b440640f49429192c234a355ce18a94a6753730e52cbd27fa7",
+    "destination_sha256": "12d6c39597b649b440640f49429192c234a355ce18a94a6753730e52cbd27fa7"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/resources-375-light.png",
+    "destination": "docs/design/outputs/visual-v2/resources-375-light.png",
+    "source_sha256": "8c3a2f28a877a5e2c444aadb1b28892379e6682aba388a947ac831e4d2a063fb",
+    "destination_sha256": "8c3a2f28a877a5e2c444aadb1b28892379e6682aba388a947ac831e4d2a063fb"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/schedules-1440-dark.png",
+    "destination": "docs/design/outputs/visual-v2/schedules-1440-dark.png",
+    "source_sha256": "e63b354c3cf07bf58aaa0218dae3b6c597a0536896cd9c8b009d42ae4ec0367d",
+    "destination_sha256": "e63b354c3cf07bf58aaa0218dae3b6c597a0536896cd9c8b009d42ae4ec0367d"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/schedules-1440-light.png",
+    "destination": "docs/design/outputs/visual-v2/schedules-1440-light.png",
+    "source_sha256": "ed515b566955f14b54d033e8abec4d67519bf5b612bd6fb42abb51b7c3592bc8",
+    "destination_sha256": "ed515b566955f14b54d033e8abec4d67519bf5b612bd6fb42abb51b7c3592bc8"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/schedules-375-dark.png",
+    "destination": "docs/design/outputs/visual-v2/schedules-375-dark.png",
+    "source_sha256": "f1d0f9720b69e44c20e258f89dcb291836ea4e4569c6178a82a14d6bc719818c",
+    "destination_sha256": "f1d0f9720b69e44c20e258f89dcb291836ea4e4569c6178a82a14d6bc719818c"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/schedules-375-light.png",
+    "destination": "docs/design/outputs/visual-v2/schedules-375-light.png",
+    "source_sha256": "e6eef132a89173e742c72370f50760d6f79927eb693c08fd86752a1225ec15a0",
+    "destination_sha256": "e6eef132a89173e742c72370f50760d6f79927eb693c08fd86752a1225ec15a0"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/security-1440-dark.png",
+    "destination": "docs/design/outputs/visual-v2/security-1440-dark.png",
+    "source_sha256": "994d1941e68bbb06227cfbc536f27b35461299a21a93036da472ffcd4c4e16d3",
+    "destination_sha256": "994d1941e68bbb06227cfbc536f27b35461299a21a93036da472ffcd4c4e16d3"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/security-1440-light.png",
+    "destination": "docs/design/outputs/visual-v2/security-1440-light.png",
+    "source_sha256": "47d8ebdbbfa1eb5db7012a3eabf3e7ff92fc10a59cc3d79bd335436b28203717",
+    "destination_sha256": "47d8ebdbbfa1eb5db7012a3eabf3e7ff92fc10a59cc3d79bd335436b28203717"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/security-375-dark.png",
+    "destination": "docs/design/outputs/visual-v2/security-375-dark.png",
+    "source_sha256": "d58e6f37ed11a1362c81b2a0643121ae6be8c630d5b47ee26f8ea1476af36cc5",
+    "destination_sha256": "d58e6f37ed11a1362c81b2a0643121ae6be8c630d5b47ee26f8ea1476af36cc5"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/security-375-light.png",
+    "destination": "docs/design/outputs/visual-v2/security-375-light.png",
+    "source_sha256": "78e6230fdebb9eeb17c76e68a95e250434c290f6ebe3ef1153cd2cdf775b4ca3",
+    "destination_sha256": "78e6230fdebb9eeb17c76e68a95e250434c290f6ebe3ef1153cd2cdf775b4ca3"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/series-1440-light.png",
+    "destination": "docs/design/outputs/visual-v2/series-1440-light.png",
+    "source_sha256": "5e20087619c9dfc6ccb695a5689ad1593680ccea873306217ae47ee934075760",
+    "destination_sha256": "5e20087619c9dfc6ccb695a5689ad1593680ccea873306217ae47ee934075760"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/series-375-light.png",
+    "destination": "docs/design/outputs/visual-v2/series-375-light.png",
+    "source_sha256": "ba8e399f781df452907bb7af072c7f08d3f2fd89bed4ef8adc4f7cc4fba2c27e",
+    "destination_sha256": "ba8e399f781df452907bb7af072c7f08d3f2fd89bed4ef8adc4f7cc4fba2c27e"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/series-editor-1440-dark.png",
+    "destination": "docs/design/outputs/visual-v2/series-editor-1440-dark.png",
+    "source_sha256": "701fc6c66e939d99d9f90267daa487288fe64f340268f59330411649d854f1de",
+    "destination_sha256": "701fc6c66e939d99d9f90267daa487288fe64f340268f59330411649d854f1de"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/series-editor-1440-light.png",
+    "destination": "docs/design/outputs/visual-v2/series-editor-1440-light.png",
+    "source_sha256": "e0e57402bd59481901858d4d16e80a88435ba55421ce1c969803644220364f09",
+    "destination_sha256": "e0e57402bd59481901858d4d16e80a88435ba55421ce1c969803644220364f09"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/series-editor-375-dark.png",
+    "destination": "docs/design/outputs/visual-v2/series-editor-375-dark.png",
+    "source_sha256": "30af65e5c7279ee84df7af1dda91badd1fc3fee2405386d9b7c1ac8c0181b233",
+    "destination_sha256": "30af65e5c7279ee84df7af1dda91badd1fc3fee2405386d9b7c1ac8c0181b233"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/series-editor-375-light.png",
+    "destination": "docs/design/outputs/visual-v2/series-editor-375-light.png",
+    "source_sha256": "4f536d05a9c417f3cf7930e673ca7e1cc08176ac4e9d579191583c97451b1639",
+    "destination_sha256": "4f536d05a9c417f3cf7930e673ca7e1cc08176ac4e9d579191583c97451b1639"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/services-1440-dark.png",
+    "destination": "docs/design/outputs/visual-v2/services-1440-dark.png",
+    "source_sha256": "88bbfb044d81399589e6fd3a615a6853cc175325c0235a7e563088a8663bbf49",
+    "destination_sha256": "88bbfb044d81399589e6fd3a615a6853cc175325c0235a7e563088a8663bbf49"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/services-1440-light.png",
+    "destination": "docs/design/outputs/visual-v2/services-1440-light.png",
+    "source_sha256": "12a1bd53351adcbb836a46ec5cd96f2ba61da908a1dfe46360ef6d4bec8ed8e3",
+    "destination_sha256": "12a1bd53351adcbb836a46ec5cd96f2ba61da908a1dfe46360ef6d4bec8ed8e3"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/services-375-dark.png",
+    "destination": "docs/design/outputs/visual-v2/services-375-dark.png",
+    "source_sha256": "27df232f3eed2476c0835d79cb35e696b32fb32e45d25c59c2cd4f837c14e329",
+    "destination_sha256": "27df232f3eed2476c0835d79cb35e696b32fb32e45d25c59c2cd4f837c14e329"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/services-375-light.png",
+    "destination": "docs/design/outputs/visual-v2/services-375-light.png",
+    "source_sha256": "95619f19437ab10a9c38f7543cc694d27b623edc39d0d16278fca6f543d57ceb",
+    "destination_sha256": "95619f19437ab10a9c38f7543cc694d27b623edc39d0d16278fca6f543d57ceb"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/settings-1440-dark.png",
+    "destination": "docs/design/outputs/visual-v2/settings-1440-dark.png",
+    "source_sha256": "3183f5308cf2fa81f3ac60e03ff9aa2a5ecbe3e28edbe000c0653f02a1a35f55",
+    "destination_sha256": "3183f5308cf2fa81f3ac60e03ff9aa2a5ecbe3e28edbe000c0653f02a1a35f55"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/settings-1440-light.png",
+    "destination": "docs/design/outputs/visual-v2/settings-1440-light.png",
+    "source_sha256": "5d66ee0ae3fbe7d3e85ade4670a26228b5ac2b3baabd8cbeb1502cd7dca69392",
+    "destination_sha256": "5d66ee0ae3fbe7d3e85ade4670a26228b5ac2b3baabd8cbeb1502cd7dca69392"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/settings-375-dark.png",
+    "destination": "docs/design/outputs/visual-v2/settings-375-dark.png",
+    "source_sha256": "d9ef983fd6e81424fe04cf64a83a53dd4aab641ae54035902bb9d6ecd3651eb0",
+    "destination_sha256": "d9ef983fd6e81424fe04cf64a83a53dd4aab641ae54035902bb9d6ecd3651eb0"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/settings-375-light.png",
+    "destination": "docs/design/outputs/visual-v2/settings-375-light.png",
+    "source_sha256": "a64742a44dcfd1de3eb110a5513a6b606e0fc1d60bfe29405f2e609c6e58f1b7",
+    "destination_sha256": "a64742a44dcfd1de3eb110a5513a6b606e0fc1d60bfe29405f2e609c6e58f1b7"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/tags-1440-light.png",
+    "destination": "docs/design/outputs/visual-v2/tags-1440-light.png",
+    "source_sha256": "6ed3e408dc64d7f4e81d950e56afe56ac032fa95c89ee3c547da49ac4458da0c",
+    "destination_sha256": "6ed3e408dc64d7f4e81d950e56afe56ac032fa95c89ee3c547da49ac4458da0c"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/tags-375-light.png",
+    "destination": "docs/design/outputs/visual-v2/tags-375-light.png",
+    "source_sha256": "3781baf8da7781df7fcc7be477675c7e41b61434f8d986655e8243dadbf17a65",
+    "destination_sha256": "3781baf8da7781df7fcc7be477675c7e41b61434f8d986655e8243dadbf17a65"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/tags-editor-1440-light.png",
+    "destination": "docs/design/outputs/visual-v2/tags-editor-1440-light.png",
+    "source_sha256": "5b117c66dc9bfb45aecee28fb5e4ff0dbd7eec80fbe6ccd91aa16a5e99401bc3",
+    "destination_sha256": "5b117c66dc9bfb45aecee28fb5e4ff0dbd7eec80fbe6ccd91aa16a5e99401bc3"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/tags-editor-375-light.png",
+    "destination": "docs/design/outputs/visual-v2/tags-editor-375-light.png",
+    "source_sha256": "42dfa37e6e819d169de66a117b25cf0a453216511379b8b71a1bce89f2aa3a92",
+    "destination_sha256": "42dfa37e6e819d169de66a117b25cf0a453216511379b8b71a1bce89f2aa3a92"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/text-200-375-light.png",
+    "destination": "docs/design/outputs/visual-v2/text-200-375-light.png",
+    "source_sha256": "4e69765576be5af4aa50f8a90f36d2ddac8abd1d9461211ef03c41dc4b36250f",
+    "destination_sha256": "4e69765576be5af4aa50f8a90f36d2ddac8abd1d9461211ef03c41dc4b36250f"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/theme-menu-375-dark.png",
+    "destination": "docs/design/outputs/visual-v2/theme-menu-375-dark.png",
+    "source_sha256": "1a2558abecd3b4c09ae9c4a4c3c717a18f24a3859b8665de7c7205727bd2af2b",
+    "destination_sha256": "1a2558abecd3b4c09ae9c4a4c3c717a18f24a3859b8665de7c7205727bd2af2b"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/theme-menu-375-light.png",
+    "destination": "docs/design/outputs/visual-v2/theme-menu-375-light.png",
+    "source_sha256": "7346a4e1308120c20422f0fe67be383dd842eac854be776e7a42e0b7812173fb",
+    "destination_sha256": "7346a4e1308120c20422f0fe67be383dd842eac854be776e7a42e0b7812173fb"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/tool-detail-1440-light.png",
+    "destination": "docs/design/outputs/visual-v2/tool-detail-1440-light.png",
+    "source_sha256": "450e8c6f74639536c7a9e4c1ae216b752acc0d04b8b9a53b37f56d7b83b1c199",
+    "destination_sha256": "450e8c6f74639536c7a9e4c1ae216b752acc0d04b8b9a53b37f56d7b83b1c199"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/tool-detail-375-light.png",
+    "destination": "docs/design/outputs/visual-v2/tool-detail-375-light.png",
+    "source_sha256": "c3e6e54eb6a34ebe5e9d5c31edc5a8e142a6261d83a425a49511f7d272a05881",
+    "destination_sha256": "c3e6e54eb6a34ebe5e9d5c31edc5a8e142a6261d83a425a49511f7d272a05881"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/tools-1440-light.png",
+    "destination": "docs/design/outputs/visual-v2/tools-1440-light.png",
+    "source_sha256": "ea81a5a78af8b695a9537c029576f72ee8d56da9ea1fdcc24860eebac09406b0",
+    "destination_sha256": "ea81a5a78af8b695a9537c029576f72ee8d56da9ea1fdcc24860eebac09406b0"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/tools-375-light.png",
+    "destination": "docs/design/outputs/visual-v2/tools-375-light.png",
+    "source_sha256": "2ad377cb76b9bd5bdc6b1db87d815c056a1026bf1ff8e6d53f59c3f68954267e",
+    "destination_sha256": "2ad377cb76b9bd5bdc6b1db87d815c056a1026bf1ff8e6d53f59c3f68954267e"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/updates-1440-light.png",
+    "destination": "docs/design/outputs/visual-v2/updates-1440-light.png",
+    "source_sha256": "c5c6b1180193f20a4248fafeeab3612a7ef9851b67cbbb612231f301d3537234",
+    "destination_sha256": "c5c6b1180193f20a4248fafeeab3612a7ef9851b67cbbb612231f301d3537234"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/visual-v2/updates-375-light.png",
+    "destination": "docs/design/outputs/visual-v2/updates-375-light.png",
+    "source_sha256": "d7998fe6c520e7bc7eb3279332cca0c99914537bfb5fd4852d127680f9759b0b",
+    "destination_sha256": "d7998fe6c520e7bc7eb3279332cca0c99914537bfb5fd4852d127680f9759b0b"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/个人综合站-功能与状态规格.md",
+    "destination": "docs/design/outputs/个人综合站-功能与状态规格.md",
+    "source_sha256": "db219160e7b9dbec7f2fdb31e703617f367b23eb724a5b01cb215aba61fac8e9",
+    "destination_sha256": "db219160e7b9dbec7f2fdb31e703617f367b23eb724a5b01cb215aba61fac8e9"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/个人综合站-实施计划阶段交接文档-2026-09-26.md",
+    "destination": "docs/design/outputs/个人综合站-实施计划阶段交接文档-2026-09-26.md",
+    "source_sha256": "3d7f244b8d46736d898c1786107f459c61420c020f27cb9dc88d755119ad8e20",
+    "destination_sha256": "046123f42746056c8e8f808796a265d0356ba9bdb875a913716c8a83695c322c"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/个人综合站-成品调研与架构审查.md",
+    "destination": "docs/design/outputs/个人综合站-成品调研与架构审查.md",
+    "source_sha256": "9e76e7c193437ba151eb99d0d59012d105fce546f412c41030767eb5761ea26f",
+    "destination_sha256": "9e76e7c193437ba151eb99d0d59012d105fce546f412c41030767eb5761ea26f"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/个人综合站-新会话交接文档.md",
+    "destination": "docs/design/outputs/个人综合站-新会话交接文档.md",
+    "source_sha256": "e7d51535515c9f7ab8ef21867760bcf57f22ff3a60895bc89903a3500104cb38",
+    "destination_sha256": "9f49bbbba958990570b07d6497eec442dde28675abea8c4f173470a2eea8786e"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/个人综合站-架构与交互设计草案.md",
+    "destination": "docs/design/outputs/个人综合站-架构与交互设计草案.md",
+    "source_sha256": "b41a2060f3b41ff2707ef76aaaf8171047c4342f95511fde0120f8142da1eaf8",
+    "destination_sha256": "b41a2060f3b41ff2707ef76aaaf8171047c4342f95511fde0120f8142da1eaf8"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/个人综合站-正式设计规格-v0.1-待审阅.md",
+    "destination": "docs/design/outputs/个人综合站-正式设计规格-v0.1-待审阅.md",
+    "source_sha256": "0a2a63b88122cae9638453ffddb2110543bac7377773f636bf5aa0516695a2a8",
+    "destination_sha256": "0a2a63b88122cae9638453ffddb2110543bac7377773f636bf5aa0516695a2a8"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/个人综合站-正式设计规格-统一审阅入口.md",
+    "destination": "docs/design/outputs/个人综合站-正式设计规格-统一审阅入口.md",
+    "source_sha256": "cb030b441ab2681e5f1f072ba279cc74b57281625577643423a629ed73bd9445",
+    "destination_sha256": "cb030b441ab2681e5f1f072ba279cc74b57281625577643423a629ed73bd9445"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/个人综合站-视觉与组件规格.md",
+    "destination": "docs/design/outputs/个人综合站-视觉与组件规格.md",
+    "source_sha256": "65769b66c4edfd9b11232468a4fe9ff14c305055b86974fd094ef2cfcb50f9a8",
+    "destination_sha256": "65769b66c4edfd9b11232468a4fe9ff14c305055b86974fd094ef2cfcb50f9a8"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/个人综合站-语义色对比度记录.md",
+    "destination": "docs/design/outputs/个人综合站-语义色对比度记录.md",
+    "source_sha256": "e38ead45a5a255c3f0000b0237117fe3f2dc71c79844c90a58f36f8ff0b197cd",
+    "destination_sha256": "e38ead45a5a255c3f0000b0237117fe3f2dc71c79844c90a58f36f8ff0b197cd"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/个人综合站-静态视觉稿-v1-审阅索引.md",
+    "destination": "docs/design/outputs/个人综合站-静态视觉稿-v1-审阅索引.md",
+    "source_sha256": "4af24249654617db65b89ab36d9a9ad79c0e81e6032c1418ea76fef36b821ee6",
+    "destination_sha256": "6f9f98712844eeed05b653386b940584a53a540f5f3efcc7ebb2778c6787650c"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/个人综合站-静态视觉稿-v2-补充索引.md",
+    "destination": "docs/design/outputs/个人综合站-静态视觉稿-v2-补充索引.md",
+    "source_sha256": "ca3318f2fcf82b5960154669d29dd14bcaba57f1d876d13a3ce7705da29c1f03",
+    "destination_sha256": "b7d1631836770eb1816fec4fe38ba1d07723210468763784851aeb0f65a80622"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/个人综合站-页面线框与状态稿.md",
+    "destination": "docs/design/outputs/个人综合站-页面线框与状态稿.md",
+    "source_sha256": "a40e1f1cfd1eb185102428017d17c50cb5ec012c5cc0325e3c22a74ee47c5fca",
+    "destination_sha256": "a40e1f1cfd1eb185102428017d17c50cb5ec012c5cc0325e3c22a74ee47c5fca"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/outputs/架构决策记录.md",
+    "destination": "docs/design/outputs/架构决策记录.md",
+    "source_sha256": "30c3160358692118c997372bb2d7daabaec8b3e4aeec49e1b92830f247f0472a",
+    "destination_sha256": "30c3160358692118c997372bb2d7daabaec8b3e4aeec49e1b92830f247f0472a"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/astro-content.txt",
+    "destination": "docs/research/work/astro-content.txt",
+    "source_sha256": "fc3f2b0ca613cf441ec5e356f68ef718d6d4cd900941beadd600ff2bddc8a3d8",
+    "destination_sha256": "fc3f2b0ca613cf441ec5e356f68ef718d6d4cd900941beadd600ff2bddc8a3d8"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/astro-render.txt",
+    "destination": "docs/research/work/astro-render.txt",
+    "source_sha256": "8ecef61a63703478520500b10165a5186bd712b4109ae0cfcc38ec516477c238",
+    "destination_sha256": "8ecef61a63703478520500b10165a5186bd712b4109ae0cfcc38ec516477c238"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/directus-database.txt",
+    "destination": "docs/research/work/directus-database.txt",
+    "source_sha256": "c17cbdb79e2185d0e78887c2b2903f948a82f8e7c7d8a459954570f7f80c09c3",
+    "destination_sha256": "c17cbdb79e2185d0e78887c2b2903f948a82f8e7c7d8a459954570f7f80c09c3"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/directus-docker.txt",
+    "destination": "docs/research/work/directus-docker.txt",
+    "source_sha256": "c610b35bf0be67be0a43f8a103f7665c487e109b148dc468ce81de5d99896dc2",
+    "destination_sha256": "c610b35bf0be67be0a43f8a103f7665c487e109b148dc468ce81de5d99896dc2"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/directus-files.txt",
+    "destination": "docs/research/work/directus-files.txt",
+    "source_sha256": "03acf24545d589af340ad17a57cb4f8e3e3a9526b1572aa6732028ffc156c3d1",
+    "destination_sha256": "03acf24545d589af340ad17a57cb4f8e3e3a9526b1572aa6732028ffc156c3d1"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/directus-license.txt",
+    "destination": "docs/research/work/directus-license.txt",
+    "source_sha256": "ebbf9259036ff4cdb901f0530b2410e797513142acf4ccbd43045255a837cc15",
+    "destination_sha256": "ebbf9259036ff4cdb901f0530b2410e797513142acf4ccbd43045255a837cc15"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/django-admin.txt",
+    "destination": "docs/research/work/django-admin.txt",
+    "source_sha256": "8d165c486cab2fb938ca5b4249670761d2fa1897a9c22612f94bacdc1785af98",
+    "destination_sha256": "8d165c486cab2fb938ca5b4249670761d2fa1897a9c22612f94bacdc1785af98"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/ghost-db.txt",
+    "destination": "docs/research/work/ghost-db.txt",
+    "source_sha256": "f79f70b4574a0941ee8a0b9698cc57015ceb4ceb896bcbb07f2aeab934ee19a6",
+    "destination_sha256": "f79f70b4574a0941ee8a0b9698cc57015ceb4ceb896bcbb07f2aeab934ee19a6"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/ghost-export.txt",
+    "destination": "docs/research/work/ghost-export.txt",
+    "source_sha256": "aaf78ea2438d8c129388566931c541b3425124f6ea476565b60b5da26c963a2c",
+    "destination_sha256": "aaf78ea2438d8c129388566931c541b3425124f6ea476565b60b5da26c963a2c"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/ghost-install.txt",
+    "destination": "docs/research/work/ghost-install.txt",
+    "source_sha256": "64d18de6928608ee002124acbe96d709fa9fd194d000bf1bb7257755b3bfe686",
+    "destination_sha256": "64d18de6928608ee002124acbe96d709fa9fd194d000bf1bb7257755b3bfe686"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/halo-attachments.txt",
+    "destination": "docs/research/work/halo-attachments.txt",
+    "source_sha256": "ea481828888fa73c255425a69cb9d4e6069775d3c7e2c14dbb16760b6b9d8503",
+    "destination_sha256": "ea481828888fa73c255425a69cb9d4e6069775d3c7e2c14dbb16760b6b9d8503"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/halo-backup.txt",
+    "destination": "docs/research/work/halo-backup.txt",
+    "source_sha256": "df467215c41cafef02a3991efa87babc1e05eff4bf6a55f11636eb43c411547b",
+    "destination_sha256": "df467215c41cafef02a3991efa87babc1e05eff4bf6a55f11636eb43c411547b"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/halo-compose.txt",
+    "destination": "docs/research/work/halo-compose.txt",
+    "source_sha256": "465f3bd96fb50d424f52a7f848c0972c6aea50105b15197a25588fc289579a42",
+    "destination_sha256": "465f3bd96fb50d424f52a7f848c0972c6aea50105b15197a25588fc289579a42"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/halo-detail-source.txt",
+    "destination": "docs/research/work/halo-detail-source.txt",
+    "source_sha256": "61887babb8cdabe51a13e552d8104a3a8eef829feac17182d195865b8394d3c6",
+    "destination_sha256": "61887babb8cdabe51a13e552d8104a3a8eef829feac17182d195865b8394d3c6"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/halo-faq.txt",
+    "destination": "docs/research/work/halo-faq.txt",
+    "source_sha256": "dee9e8e27512aa7d89cccd0e1d656a299b6d8c9fcc1cd7291fb80865651fec13",
+    "destination_sha256": "dee9e8e27512aa7d89cccd0e1d656a299b6d8c9fcc1cd7291fb80865651fec13"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/halo-index.txt",
+    "destination": "docs/research/work/halo-index.txt",
+    "source_sha256": "c920282a347bc6b06274e5cc221dab98ed2ee4ac2a34444c0857c7d8081578db",
+    "destination_sha256": "c920282a347bc6b06274e5cc221dab98ed2ee4ac2a34444c0857c7d8081578db"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/halo-install.txt",
+    "destination": "docs/research/work/halo-install.txt",
+    "source_sha256": "ba05be21671013a6c3d01caa34fd21b48d118996911b7fe1ce7590b9d6653fd0",
+    "destination_sha256": "ba05be21671013a6c3d01caa34fd21b48d118996911b7fe1ce7590b9d6653fd0"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/halo-links.txt",
+    "destination": "docs/research/work/halo-links.txt",
+    "source_sha256": "fcdf34f2fae7092432120f7a8176d39d337ae9b9a023f50e7bd053e19f7680bc",
+    "destination_sha256": "fcdf34f2fae7092432120f7a8176d39d337ae9b9a023f50e7bd053e19f7680bc"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/halo-markdown.txt",
+    "destination": "docs/research/work/halo-markdown.txt",
+    "source_sha256": "1abfef9cef9cff2ef04b4f878789394ab434fd57d26e68d86331459e78f27512",
+    "destination_sha256": "1abfef9cef9cff2ef04b4f878789394ab434fd57d26e68d86331459e78f27512"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/halo-moments.txt",
+    "destination": "docs/research/work/halo-moments.txt",
+    "source_sha256": "578cef2e825ddcb76251170a1904d72a900c6ebcfec67f5aa656d8330a350c7a",
+    "destination_sha256": "578cef2e825ddcb76251170a1904d72a900c6ebcfec67f5aa656d8330a350c7a"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/halo-photos.txt",
+    "destination": "docs/research/work/halo-photos.txt",
+    "source_sha256": "f0201334e536faa56cf680e88a9eb74e0a77a96f462712806daae8f2eb8022fc",
+    "destination_sha256": "f0201334e536faa56cf680e88a9eb74e0a77a96f462712806daae8f2eb8022fc"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/halo-plans-detail-source.txt",
+    "destination": "docs/research/work/halo-plans-detail-source.txt",
+    "source_sha256": "d0d4233deb067b88dc27ff51780ccdc7ca96af6df59c60a7570ba104693eec3f",
+    "destination_sha256": "d0d4233deb067b88dc27ff51780ccdc7ca96af6df59c60a7570ba104693eec3f"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/halo-plans-text.txt",
+    "destination": "docs/research/work/halo-plans-text.txt",
+    "source_sha256": "b35c648f59af59e1c2dc2d1e25ae3886aaa4663650191ac6107941df0a9656c5",
+    "destination_sha256": "b35c648f59af59e1c2dc2d1e25ae3886aaa4663650191ac6107941df0a9656c5"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/halo-plugin.txt",
+    "destination": "docs/research/work/halo-plugin.txt",
+    "source_sha256": "26d81cec410130d8e070d261424f4e192674e12abb8a72638de8ee952e9adabe",
+    "destination_sha256": "26d81cec410130d8e070d261424f4e192674e12abb8a72638de8ee952e9adabe"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/halo-posts.txt",
+    "destination": "docs/research/work/halo-posts.txt",
+    "source_sha256": "541ce1635e03776ceaeae22cc9f8a06baeec882b0af296f2c57fa740139481a5",
+    "destination_sha256": "541ce1635e03776ceaeae22cc9f8a06baeec882b0af296f2c57fa740139481a5"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/halo-readme-main.txt",
+    "destination": "docs/research/work/halo-readme-main.txt",
+    "source_sha256": "b9a18d9e22e86d1cee426810eccf4160cafdd616ec2e90bed711784fb0f79c61",
+    "destination_sha256": "b9a18d9e22e86d1cee426810eccf4160cafdd616ec2e90bed711784fb0f79c61"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/halo-snapshot.txt",
+    "destination": "docs/research/work/halo-snapshot.txt",
+    "source_sha256": "64d62a3e90870fba46f5eda9c8686bd9e1a6d25626ca72f00755ec63ebf80c8b",
+    "destination_sha256": "64d62a3e90870fba46f5eda9c8686bd9e1a6d25626ca72f00755ec63ebf80c8b"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/next-selfhost.txt",
+    "destination": "docs/research/work/next-selfhost.txt",
+    "source_sha256": "05b9a60e49f818236a628fc89b157bc47836ba66ec0ce067aae8b40281d4a379",
+    "destination_sha256": "05b9a60e49f818236a628fc89b157bc47836ba66ec0ce067aae8b40281d4a379"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/nuxt-render.txt",
+    "destination": "docs/research/work/nuxt-render.txt",
+    "source_sha256": "642916b4df18e97ea10fb7bd79c0240b420476336fef280a89208c2c1dd9d8b7",
+    "destination_sha256": "642916b4df18e97ea10fb7bd79c0240b420476336fef280a89208c2c1dd9d8b7"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/pagescms.txt",
+    "destination": "docs/research/work/pagescms.txt",
+    "source_sha256": "98174aea6447af6b47ca5f699fdf4b5c05b05accaf7a364e35a68291035cf99c",
+    "destination_sha256": "98174aea6447af6b47ca5f699fdf4b5c05b05accaf7a364e35a68291035cf99c"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/payload-db-current.txt",
+    "destination": "docs/research/work/payload-db-current.txt",
+    "source_sha256": "f0f97bd16489f188b16f8e6bca5aab5d2b586a75b7e949ba4f620fbd46fad3e0",
+    "destination_sha256": "f0f97bd16489f188b16f8e6bca5aab5d2b586a75b7e949ba4f620fbd46fad3e0"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/payload-db.txt",
+    "destination": "docs/research/work/payload-db.txt",
+    "source_sha256": "ea50a0682d7db7b2ea5743bed585aa89c0775fdd3e8ebc97b1e8b139559f46a7",
+    "destination_sha256": "ea50a0682d7db7b2ea5743bed585aa89c0775fdd3e8ebc97b1e8b139559f46a7"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/payload-rich.txt",
+    "destination": "docs/research/work/payload-rich.txt",
+    "source_sha256": "df64980c8d6d202020d65fb736a083784b858fc70fc8da5cc8ab5f9a25e52259",
+    "destination_sha256": "df64980c8d6d202020d65fb736a083784b858fc70fc8da5cc8ab5f9a25e52259"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/payload.txt",
+    "destination": "docs/research/work/payload.txt",
+    "source_sha256": "16a33c6fc9361488d6a11a2397950c19e7b197c5aba2ed8b7292fe07c343369a",
+    "destination_sha256": "16a33c6fc9361488d6a11a2397950c19e7b197c5aba2ed8b7292fe07c343369a"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/pocketbase.txt",
+    "destination": "docs/research/work/pocketbase.txt",
+    "source_sha256": "87dc90712a340107f2df12d992be82357de201834732558577b37382f0517237",
+    "destination_sha256": "87dc90712a340107f2df12d992be82357de201834732558577b37382f0517237"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/research_architecture.py",
+    "destination": "docs/research/work/research_architecture.py",
+    "source_sha256": "25b3b2ecb77c151a03c59d24798b76602ead34569cd1f4d308d3ceefcb113a92",
+    "destination_sha256": "25b3b2ecb77c151a03c59d24798b76602ead34569cd1f4d308d3ceefcb113a92"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/research_products.py",
+    "destination": "docs/research/work/research_products.py",
+    "source_sha256": "deccc7d4aec31fe110a83033ed3f30a0f551845bc43cecdf116019c45755fdeb",
+    "destination_sha256": "deccc7d4aec31fe110a83033ed3f30a0f551845bc43cecdf116019c45755fdeb"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/research_products_detail.py",
+    "destination": "docs/research/work/research_products_detail.py",
+    "source_sha256": "5a16a410c55edf81042190eb1de403075fda34d002a5bf6d19965df8ab414c33",
+    "destination_sha256": "5a16a410c55edf81042190eb1de403075fda34d002a5bf6d19965df8ab414c33"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/sqlite.txt",
+    "destination": "docs/research/work/sqlite.txt",
+    "source_sha256": "256703297f66d25f0f05c9115ae34142dc78adea3d13d3fd4f579a9a47243590",
+    "destination_sha256": "256703297f66d25f0f05c9115ae34142dc78adea3d13d3fd4f579a9a47243590"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/strapi-content.txt",
+    "destination": "docs/research/work/strapi-content.txt",
+    "source_sha256": "26f6281d194589ab63b3e9423a68174bde91b72b3d19a629a5d4b79532b5e63b",
+    "destination_sha256": "26f6281d194589ab63b3e9423a68174bde91b72b3d19a629a5d4b79532b5e63b"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/strapi-db.txt",
+    "destination": "docs/research/work/strapi-db.txt",
+    "source_sha256": "9db69faaa31090d8ea4f649357e3525655d25461fba4b0fc6688c5db06f87e20",
+    "destination_sha256": "9db69faaa31090d8ea4f649357e3525655d25461fba4b0fc6688c5db06f87e20"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/strapi-deploy.txt",
+    "destination": "docs/research/work/strapi-deploy.txt",
+    "source_sha256": "b618442ef2155bbbbe5f265b7631a220e3fd8d3539f910c8858d0b353c9499e1",
+    "destination_sha256": "b618442ef2155bbbbe5f265b7631a220e3fd8d3539f910c8858d0b353c9499e1"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/strapi-detail-source.txt",
+    "destination": "docs/research/work/strapi-detail-source.txt",
+    "source_sha256": "2208bebd2e850af5602e726d4171729e8c4f0e61e07640d3f110b74ebadf016b",
+    "destination_sha256": "2208bebd2e850af5602e726d4171729e8c4f0e61e07640d3f110b74ebadf016b"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/strapi-drafts.txt",
+    "destination": "docs/research/work/strapi-drafts.txt",
+    "source_sha256": "16d216702a031bdd270cf76a1f7820b580aac38243fa8ad66833e5ff5111931c",
+    "destination_sha256": "16d216702a031bdd270cf76a1f7820b580aac38243fa8ad66833e5ff5111931c"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/strapi-history.txt",
+    "destination": "docs/research/work/strapi-history.txt",
+    "source_sha256": "78d9f47111197e63e6a6698fde9b21296511c88107263674ed65ad99d333a754",
+    "destination_sha256": "78d9f47111197e63e6a6698fde9b21296511c88107263674ed65ad99d333a754"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/strapi-media.txt",
+    "destination": "docs/research/work/strapi-media.txt",
+    "source_sha256": "e4234f7ab37d843eeeb27fbf7876bb5e90d67a05a7b75fde061e60e5f7f6bee9",
+    "destination_sha256": "e4234f7ab37d843eeeb27fbf7876bb5e90d67a05a7b75fde061e60e5f7f6bee9"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/svelte-node.txt",
+    "destination": "docs/research/work/svelte-node.txt",
+    "source_sha256": "17a000061210224e07869f16d269f5ea1a691072b94fffddc64a9d0ade71736f",
+    "destination_sha256": "17a000061210224e07869f16d269f5ea1a691072b94fffddc64a9d0ade71736f"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/svelte-pages.txt",
+    "destination": "docs/research/work/svelte-pages.txt",
+    "source_sha256": "dbe1d07132059ac5512ed1523962480fda1ed77b392ae5cd2fa1f96ca8ef10dd",
+    "destination_sha256": "dbe1d07132059ac5512ed1523962480fda1ed77b392ae5cd2fa1f96ca8ef10dd"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/typecho.txt",
+    "destination": "docs/research/work/typecho.txt",
+    "source_sha256": "22ecfde8d4d847b53cc4b2dd9bfcc79a3d7c04d4b08d220cb596eddb528ae7dd",
+    "destination_sha256": "22ecfde8d4d847b53cc4b2dd9bfcc79a3d7c04d4b08d220cb596eddb528ae7dd"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/wordpress-docker.txt",
+    "destination": "docs/research/work/wordpress-docker.txt",
+    "source_sha256": "44cf5c14b8081361f4378553c3bb2cf2ea1ba0580619a38f31b4f7958f087803",
+    "destination_sha256": "44cf5c14b8081361f4378553c3bb2cf2ea1ba0580619a38f31b4f7958f087803"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/wordpress-export.txt",
+    "destination": "docs/research/work/wordpress-export.txt",
+    "source_sha256": "89abce4646b5bf2a28002781262d20a99f49cd16436054c9097869562af4bf83",
+    "destination_sha256": "89abce4646b5bf2a28002781262d20a99f49cd16436054c9097869562af4bf83"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/wordpress-features.txt",
+    "destination": "docs/research/work/wordpress-features.txt",
+    "source_sha256": "906810c33c6c49e578322334b4d2514375861980e2ef0a4457e2632e5ce9a84d",
+    "destination_sha256": "906810c33c6c49e578322334b4d2514375861980e2ef0a4457e2632e5ce9a84d"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/wordpress-uploads.txt",
+    "destination": "docs/research/work/wordpress-uploads.txt",
+    "source_sha256": "8833869349926cd58a8bb73aa9e0bde207810ee35dc4fe2c08069cf82c269300",
+    "destination_sha256": "8833869349926cd58a8bb73aa9e0bde207810ee35dc4fe2c08069cf82c269300"
+  },
+  {
+    "source": "/Users/yyb/Documents/Codex/2026-09-24/new-chat/work/wordpress.txt",
+    "destination": "docs/research/work/wordpress.txt",
+    "source_sha256": "4af74c79c6bc46d6c7d726e8ae40431fb5fab1fa51035985be22ea230e7979e8",
+    "destination_sha256": "4af74c79c6bc46d6c7d726e8ae40431fb5fab1fa51035985be22ea230e7979e8"
+  }
+]

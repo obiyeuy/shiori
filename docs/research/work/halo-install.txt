@@ -1,0 +1,117 @@
+> For AI agents: the complete documentation index is available at https://docs.halo.run/llms.txt, the full documentation bundle is available at https://docs.halo.run/llms-full.txt.
+
+# 安装 Halo
+
+## 使用 Docker Compose 部署
+
+### [使用 Docker Compose 部署](/guide/install/docker-compose.md)
+
+- [环境搭建](/guide/install/docker-compose.md#环境搭建)
+- [部署 Halo](/guide/install/docker-compose.md#部署-halo)
+- [升级 Halo](/guide/install/docker-compose.md#升级-halo)
+- [反向代理](/guide/install/docker-compose.md#反向代理)
+## 使用 Docker 部署
+
+### [使用 Docker 部署](/guide/install/docker.md)
+
+- [环境搭建](/guide/install/docker.md#环境搭建)
+- [部署 Halo](/guide/install/docker.md#部署-halo)
+- [升级 Halo](/guide/install/docker.md#升级-halo)
+## 使用 1Panel 部署
+
+### [使用 1Panel 部署](/guide/install/1panel.md)
+
+- [1Panel 简介](/guide/install/1panel.md#1panel-简介)
+- [安装 Halo 应用](/guide/install/1panel.md#安装-halo-应用)
+- [创建网站](/guide/install/1panel.md#创建网站)
+- [升级 Halo](/guide/install/1panel.md#升级-halo)
+- [激活许可证](/guide/install/1panel.md#激活许可证)
+## 使用宝塔面板部署
+
+### [使用宝塔面板部署](/guide/install/bt-panel.md)
+
+- [宝塔面板简介](/guide/install/bt-panel.md#宝塔面板简介)
+- [安装 Halo 应用](/guide/install/bt-panel.md#安装-halo-应用)
+- [配置网站和 SSL](/guide/install/bt-panel.md#配置网站和-ssl)
+- [升级 Halo](/guide/install/bt-panel.md#升级-halo)
+- [激活许可证](/guide/install/bt-panel.md#激活许可证)
+## 使用 Helm 部署
+
+### [使用 Helm 部署](/guide/install/helm.md)
+
+- [先决条件](/guide/install/helm.md#先决条件)
+- [快速部署](/guide/install/helm.md#快速部署)
+- [卸载](/guide/install/helm.md#卸载)
+- [使用 MySQL 数据库](/guide/install/helm.md#使用-mysql-数据库)
+- [使用已有的数据库](/guide/install/helm.md#使用已有的数据库)
+- [创建 Ingress](/guide/install/helm.md#创建-ingress)
+- [其他参数](/guide/install/helm.md#其他参数)
+## 使用 Podman 部署
+
+### [使用 Podman 部署](/guide/install/podman.md)
+
+- [前言](/guide/install/podman.md#前言)
+- [环境搭建](/guide/install/podman.md#环境搭建)
+- [部署 Halo](/guide/install/podman.md#部署-halo)
+- [升级 Halo](/guide/install/podman.md#升级-halo)
+- [使用 Podman Quadlet](/guide/install/podman.md#使用-podman-quadlet)
+## 使用 JAR 文件部署
+
+### [使用 JAR 文件部署](/guide/install/jar-file.md)
+
+- [依赖检查](/guide/install/jar-file.md#依赖检查)
+- [安装](/guide/install/jar-file.md#安装)
+- [作为服务运行](/guide/install/jar-file.md#作为服务运行)
+- [版本升级](/guide/install/jar-file.md#版本升级)
+- [反向代理](/guide/install/jar-file.md#反向代理)
+## 使用离线包部署
+
+### [使用离线包部署](/guide/install/offline.md)
+
+- [下载安装包](/guide/install/offline.md#下载安装包)
+- [安装部署](/guide/install/offline.md#安装部署)
+## 配置说明
+
+### [配置说明](/guide/install/config.md)
+
+- [配置方式](/guide/install/config.md#配置方式)
+- [配置列表](/guide/install/config.md#配置列表)
+- [Redis 集成](/guide/install/config.md#redis-集成)
+## 云平台
+
+### [阿里云计算巢部署](/guide/install/cloud/alibaba-cloud-computenest.md)
+
+- [部署流程](/guide/install/cloud/alibaba-cloud-computenest.md#部署流程)
+
+### [阿里云云市场部署](/guide/install/cloud/alibaba-cloud-market.md)
+
+- [购买服务器](/guide/install/cloud/alibaba-cloud-market.md#购买服务器)
+- [访问 Halo](/guide/install/cloud/alibaba-cloud-market.md#访问-halo)
+- [管理 Halo](/guide/install/cloud/alibaba-cloud-market.md#管理-halo)
+
+### [腾讯云轻量应用模板](/guide/install/cloud/tencent-cloud-lighthouse.md)
+
+- [购买轻量应用服务器](/guide/install/cloud/tencent-cloud-lighthouse.md#购买轻量应用服务器)
+- [应用管理](/guide/install/cloud/tencent-cloud-lighthouse.md#应用管理)
+- [访问 Halo](/guide/install/cloud/tencent-cloud-lighthouse.md#访问-halo)
+- [1Panel 管理](/guide/install/cloud/tencent-cloud-lighthouse.md#1panel-管理)
+- [查看预装应用](/guide/install/cloud/tencent-cloud-lighthouse.md#查看预装应用)
+- [升级 Halo](/guide/install/cloud/tencent-cloud-lighthouse.md#升级-halo)
+- [绑定域名](/guide/install/cloud/tencent-cloud-lighthouse.md#绑定域名)
+## 其他指南
+
+### [Nginx Proxy Manager 反向代理](/guide/install/other/nginxproxymanager.md)
+
+- [Halo 部署](/guide/install/other/nginxproxymanager.md#halo-部署)
+- [简介](/guide/install/other/nginxproxymanager.md#简介)
+- [说明](/guide/install/other/nginxproxymanager.md#说明)
+- [安装 Nginx Proxy Manager](/guide/install/other/nginxproxymanager.md#安装-nginx-proxy-manager)
+- [配置 Halo 的反向代理](/guide/install/other/nginxproxymanager.md#配置-halo-的反向代理)
+- [进阶配置：性能与安全（可选）](/guide/install/other/nginxproxymanager.md#进阶配置性能与安全可选)
+
+### [Traefik 反向代理](/guide/install/other/traefik.md)
+
+- [Halo 部署](/guide/install/other/traefik.md#halo-部署)
+- [简介](/guide/install/other/traefik.md#简介)
+- [创建 Traefik](/guide/install/other/traefik.md#创建-traefik)
+- [配置 Halo 的反向代理](/guide/install/other/traefik.md#配置-halo-的反向代理)
