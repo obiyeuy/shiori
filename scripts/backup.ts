@@ -1,0 +1,24 @@
+import {exportDiscussions} from '../src/lib/server/backup/giscus.js';
+import {encrypt} from '../src/lib/server/backup/sets.js';
+import {randomUUID} from 'node:crypto';
+import {pullBackup} from '../src/lib/server/backup/pull.js';
+import {readFile,stat,mkdir,writeFile} from 'node:fs/promises';import {createPrivateKey,createPublicKey} from 'node:crypto';import {resolve} from 'node:path';import {createDbPool} from '../src/lib/server/db/client.js';import {createBackupSet,verifyBackupSet,recordMacReceipt} from '../src/lib/server/backup/sets.js';import {runIsolatedRestore} from '../src/lib/server/backup/restore.js';import {writeStatus} from '../src/lib/server/backup/status.js';
+async function privateFile(env:string){const path=process.env[env];if(!path)throw new Error(`${env} required`);const info=await stat(path);if(!info.isFile()||(info.mode&0o077))throw new Error('key file must be private');return readFile(path);}
+const command=process.argv[2],root=process.env.BACKUP_ROOT,statusRoot=process.env.BACKUP_STATUS_ROOT;
+if(!root||!statusRoot)throw new Error('BACKUP_ROOT and BACKUP_STATUS_ROOT required');
+try{
+ if(command==='giscus'){
+  try{const [owner,repo]=(process.env.GISCUS_REPOSITORY??'').split('/');const token=(await privateFile('GISCUS_TOKEN_FILE')).toString().trim();const result=await exportDiscussions({owner,repo,token});const directory=resolve(root,'giscus');await mkdir(directory,{recursive:true,mode:0o700});await writeFile(resolve(directory,randomUUID()+'.enc'),encrypt(Buffer.from(JSON.stringify(result)),await privateFile('BACKUP_ENCRYPTION_KEY_FILE')),{flag:'wx',mode:0o600});await writeStatus(statusRoot,'giscus-export',{state:'success',eventAt:result.completedAt,collectedAt:new Date().toISOString()});}catch{await writeStatus(statusRoot,'giscus-export',{state:'failure',eventAt:new Date().toISOString(),collectedAt:new Date().toISOString()});throw new Error('giscus export failed');}
+ }else if(command==='create'){
+  const key=await privateFile('BACKUP_ENCRYPTION_KEY_FILE'),signingKey=createPrivateKey(await privateFile('BACKUP_SIGNING_KEY_FILE')),pool=createDbPool();const started=new Date().toISOString();await writeStatus(statusRoot,'server-backup',{state:'running',eventAt:started,collectedAt:started});
+  try{const set=await createBackupSet({pool,mediaRoot:process.env.MEDIA_ROOT!,backupRoot:root,encryptionKey:key,signingKey,keyId:process.env.BACKUP_KEY_ID??'primary'});await writeStatus(statusRoot,'server-backup',{state:'success',eventAt:set.manifest.snapshotAt,collectedAt:new Date().toISOString(),backupSetId:set.manifest.id});console.log(JSON.stringify({id:set.manifest.id,digest:set.digest}));}catch{await writeStatus(statusRoot,'server-backup',{state:'failure',eventAt:new Date().toISOString(),collectedAt:new Date().toISOString()});throw new Error('backup failed; incomplete set retained');}finally{await pool.end();}
+ }else{
+  const publicKey=createPublicKey(await readFile(process.env.BACKUP_VERIFY_KEY_FILE!));
+  if(command==='pull'){console.log(await pullBackup({host:process.env.BACKUP_READ_HOST!,remoteRoot:process.env.BACKUP_REMOTE_ROOT!,localRoot:root,id:process.argv[3],publicKey}));}
+  else if(command==='receipt'){let input='';for await(const chunk of process.stdin){input+=chunk;if(input.length>16384)throw new Error('receipt too large');}const record=await recordMacReceipt(root,JSON.parse(input),publicKey);await writeStatus(statusRoot,'mac-receipt',{state:'success',eventAt:record.snapshotAt,collectedAt:record.receivedAt,backupSetId:record.backupSetId});console.log('receipt accepted');}
+  else if(command==='verify'){
+   const id=process.argv[3];if(!/^[a-f0-9-]{36}$/.test(id))throw new Error('invalid set ID');const result=await verifyBackupSet(resolve(root,id),await privateFile('BACKUP_ENCRYPTION_KEY_FILE'),publicKey);const pending=resolve(root,'pending-receipts');await mkdir(pending,{recursive:true,mode:0o700});const receipt={backupSetId:id,manifestDigest:result.digest,verifiedAt:new Date().toISOString(),fileCount:result.manifest.files.length,bytes:result.manifest.files.reduce((n,f)=>n+f.bytes,0),device:process.env.BACKUP_DEVICE??'mac',result:'success'};const path=resolve(pending,id+'.json');try{await writeFile(path,JSON.stringify(receipt),{flag:'wx',mode:0o600});}catch(e){if((e as NodeJS.ErrnoException).code!=='EEXIST')throw e;}console.log(path);
+  }else if(command==='restore'){const id=process.argv[3];if(!/^[a-f0-9-]{36}$/.test(id))throw new Error('invalid set ID');console.log(JSON.stringify(await runIsolatedRestore({directory:resolve(root,id),encryptionKey:await privateFile('BACKUP_ENCRYPTION_KEY_FILE'),publicKey,adminUrl:process.env.DATABASE_URL!,outputRoot:process.env.RESTORE_ROOT!})));}
+  else throw new Error('choose create, verify, receipt or restore');
+ }
+}catch{console.error('备份操作失败；保留产物并检查配置、权限和完整性，未宣布成功。');process.exitCode=1;}

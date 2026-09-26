@@ -1,0 +1,64 @@
+name: personal-site-production
+services:
+  db:
+    image: postgres:16-bookworm@sha256:efedf3595f1d6f415c08568ba171029bf54052e754cc9f030e3f2412b21f3d67
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: personal_site
+      POSTGRES_USER: personal_site
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?required}
+    volumes: ["production-db:/var/lib/postgresql/data"]
+    networks: [site-internal]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U personal_site -d personal_site"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+    logging: {driver: none}
+  web:
+    image: ${SITE_IMAGE:?Set a reviewed immutable image digest}
+    restart: unless-stopped
+    user: "1000:1000"
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    environment: &application
+      NODE_ENV: production
+      DATABASE_URL: postgres://personal_site:${POSTGRES_PASSWORD}@db:5432/personal_site
+      SESSION_SECRET: ${SESSION_SECRET:?required}
+      PUBLIC_SITE_URL: ${PUBLIC_SITE_URL:?required}
+      ORIGIN: ${PUBLIC_SITE_URL:?required}
+      MEDIA_ROOT: /data/media
+      BACKUP_STATUS_ROOT: /data/status
+      BODY_SIZE_LIMIT: 110M
+    ports: ["127.0.0.1:${SITE_PORT:-5180}:3000"]
+    volumes: ["${MEDIA_PATH:?required}:/data/media", "${STATUS_PATH:?required}:/data/status:ro"]
+    networks: [site-internal]
+    depends_on: {db: {condition: service_healthy}}
+    logging: {driver: none}
+  migrate:
+    profiles: [maintenance]
+    image: ${SITE_IMAGE:?Set a reviewed immutable image digest}
+    user: "1000:1000"
+    environment: *application
+    command: [node, node_modules/tsx/dist/cli.mjs, scripts/migrate.ts]
+    networks: [site-internal]
+    depends_on: {db: {condition: service_healthy}}
+    logging: {driver: none}
+  scheduler:
+    profiles: [jobs]
+    image: ${SITE_IMAGE:?Set a reviewed immutable image digest}
+    user: "1000:1000"
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    environment: *application
+    command: [node, node_modules/tsx/dist/cli.mjs, scripts/schedule-worker.ts]
+    volumes: ["${MEDIA_PATH:?required}:/data/media"]
+    networks: [site-internal]
+    depends_on: {db: {condition: service_healthy}}
+    logging: {driver: none}
+volumes:
+  production-db:
+networks:
+  site-internal:

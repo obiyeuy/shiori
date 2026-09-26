@@ -1,3 +1,4 @@
+import {readStatus} from '../backup/status.js';
 import type { OperationalStatus, OperationalState } from '../content/types.js';
 const states:OperationalState[]=['unconfigured','no-record','running','success','failure','stale','read-failure','unknown'];
 export function summarizeOperation(record:unknown,now=new Date(),freshForMs=26*3600000):OperationalStatus{
@@ -15,7 +16,7 @@ export function summarizeOperation(record:unknown,now=new Date(),freshForMs=26*3
  if(result.state==='running' && result.eventAt && +now-+result.eventAt>2*3600000)result.state='unknown';
  return result;
 }
-/** P0 default provider; P4 registers record readers. Absence is never success. */
-export async function getOperationalStatus(_now=new Date()):Promise<OperationalStatus>{
- return {state:'unconfigured',eventAt:null,collectedAt:null,lastSuccessAt:null,lastFailureAt:null,detail:null};
+/** Read-only status directory; keys and backup payloads are never exposed to Web. */
+export async function getOperationalStatus(now=new Date()):Promise<OperationalStatus>{
+ return readStatus(process.env.BACKUP_STATUS_ROOT,'server-backup',now);
 }

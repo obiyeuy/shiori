@@ -1,0 +1,1 @@
+import {requireOwner} from '$lib/server/auth/require-owner';import {readStatus,streams} from '$lib/server/backup/status';import type {PageServerLoad} from './$types';export const load:PageServerLoad=async event=>{requireOwner(event);return {records:await Promise.all(streams.map(async key=>({key,status:await readStatus(process.env.BACKUP_STATUS_ROOT,key)})))};};

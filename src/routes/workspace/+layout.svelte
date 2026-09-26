@@ -1,7 +1,7 @@
 <script lang="ts">
  import {onMount} from 'svelte';import {page} from '$app/state';import type {Snippet} from 'svelte';import '$lib/components/ui/tokens.css';
  let {children}:{children:Snippet}=$props();let ready=$state(false);onMount(()=>{ready=true;});let drawer:HTMLDialogElement;let opener:HTMLButtonElement;
- const links=[['/workspace','概览'],['/workspace/content','内容'],['/workspace/tags','标签'],['/workspace/series','系列'],['/workspace/media','媒体'],['/workspace/schedules','排期'],['/workspace/comments','评论设置'],['/workspace/services','服务入口'],['/workspace/settings','站点设置'],['/workspace/security','账号安全']];
+ const links=[['/workspace','概览'],['/workspace/content','内容'],['/workspace/tags','标签'],['/workspace/series','系列'],['/workspace/media','媒体'],['/workspace/schedules','排期'],['/workspace/comments','评论设置'],['/workspace/services','服务入口'],['/workspace/settings','站点设置'],['/workspace/security','账号安全'],['/workspace/operations','运行记录']];
  function close(){drawer.close();opener.focus();}
 </script>
 <a class="skip" href="#workspace-main">跳到工作台内容</a>

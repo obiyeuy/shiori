@@ -1,3 +1,4 @@
+import {readStatus} from '../backup/status.js';
 import type {Pool} from 'pg';
 import {getOperationalStatus,summarizeOperation} from '../operations/status.js';
 import type {OperationalStatus} from '../content/types.js';
@@ -13,7 +14,7 @@ async function readRecordedStatus(pool:Pool,key:string,now:Date,freshForMs:numbe
 export async function getWorkspaceOverview(pool:Pool,now=new Date()){
  const counts=(await pool.query(`SELECT count(*) FILTER(WHERE NOT archived) total,count(*) FILTER(WHERE public_version_id IS NULL AND NOT archived) drafts,count(*) FILTER(WHERE public_version_id IS NOT NULL) published FROM content_items`)).rows[0];
  const overdue=(await pool.query("SELECT count(*) FROM schedules WHERE status IN ('pending','retrying','failed','running') AND run_at<$1",[now])).rows[0].count;
- const [scanner,backups,remote,comments,storage]=await Promise.all([readRecordedStatus(pool,'schedule-scan',now,120000),getOperationalStatus(now),readRecordedStatus(pool,'mac-receipt',now,26*3600000,true),readRecordedStatus(pool,'giscus-export',now,26*3600000,true),readRecordedStatus(pool,'storage',now,300000,true)]);
+ const [scanner,backups,remote,comments,storage]=await Promise.all([readRecordedStatus(pool,'schedule-scan',now,120000),getOperationalStatus(now),readStatus(process.env.BACKUP_STATUS_ROOT,'mac-receipt',now),readStatus(process.env.BACKUP_STATUS_ROOT,'giscus-export',now),readStatus(process.env.BACKUP_STATUS_ROOT,'storage',now)]);
  const drafts=(await pool.query<{id:string;title:string;updated_at:Date}>("SELECT c.id,COALESCE(d.payload->>'title','未命名内容') title,d.updated_at FROM drafts d JOIN content_items c ON c.id=d.content_id WHERE NOT c.archived ORDER BY d.updated_at DESC LIMIT 5")).rows;
  const upcoming=(await pool.query<{id:string;content_id:string;status:string;run_at:Date}>("SELECT id,content_id,status,run_at FROM schedules WHERE status IN ('pending','retrying','failed','running') AND (status='failed' OR run_at<$1::timestamptz+interval '24 hours') ORDER BY (status='failed') DESC,run_at LIMIT 10",[now])).rows;
  const services=(await pool.query<{id:string;name:string;url:string;status:string;status_updated_at:Date}>('SELECT * FROM service_links ORDER BY name LIMIT 5')).rows;

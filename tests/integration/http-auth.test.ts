@@ -34,5 +34,5 @@ it('protects HTML and private routes, enforces trusted Origin and supports revoc
  expect((await post('/logout',base,new URLSearchParams(),header)).status).toBe(303);
  expect((await fetch(base+'/workspace',{headers:{cookie:header},redirect:'manual'})).status).toBe(303);
  expect((await fetch(base+'/auth/github')).status).toBe(503);
- expect((await db.query("SELECT to_regclass('schema_migrations') AS name")).rows[0].name).toBeNull();
+ expect((await db.query('SELECT count(*) FROM schema_migrations')).rows[0].count).toBe('4');
 });
