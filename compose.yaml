@@ -1,0 +1,29 @@
+name: personal-site-p0-local
+services:
+  db:
+    image: postgres:16-bookworm@sha256:efedf3595f1d6f415c08568ba171029bf54052e754cc9f030e3f2412b21f3d67
+    environment:
+      POSTGRES_DB: personal_site
+      POSTGRES_USER: personal_site
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set a local database password}
+    ports: ["127.0.0.1:55432:5432"]
+    volumes: ["db-data:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U personal_site -d personal_site"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  web:
+    profiles: [web]
+    build: .
+    environment:
+      DATABASE_URL: postgres://personal_site:${POSTGRES_PASSWORD}@db:5432/${APP_DATABASE_NAME:-personal_site}
+      SESSION_SECRET: ${SESSION_SECRET:?Set session secret}
+      PUBLIC_SITE_URL: ${PUBLIC_SITE_URL:-http://127.0.0.1:5173}
+      ORIGIN: ${PUBLIC_SITE_URL:-http://127.0.0.1:5173}
+      NODE_ENV: production
+    ports: ["127.0.0.1:5173:3000"]
+    depends_on:
+      db: {condition: service_healthy}
+volumes:
+  db-data:

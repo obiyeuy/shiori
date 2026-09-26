@@ -3,3 +3,8 @@
 .env.*
 !.env.example
 .superpowers/
+node_modules/
+.svelte-kit/
+build/
+.local/
+coverage/

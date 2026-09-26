@@ -1,0 +1,49 @@
+{
+  "name": "personal-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:init-owner": "tsx scripts/init-owner.ts",
+    "typecheck": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "test:integration": "vitest run tests/integration",
+    "test:unit": "vitest run tests/unit",
+    "lint": "eslint .",
+    "db:search-index": "tsx scripts/enable-search-index.ts"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@sveltejs/adapter-node": "5.5.7",
+    "@sveltejs/kit": "2.70.3",
+    "@sveltejs/vite-plugin-svelte": "6.2.4",
+    "@types/pg": "8.23.1",
+    "drizzle-kit": "0.31.11",
+    "eslint": "10.11.0",
+    "eslint-plugin-svelte": "3.23.0",
+    "pg-mem": "3.0.14",
+    "svelte": "5.57.1",
+    "svelte-check": "4.7.6",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.70.1",
+    "vite": "7.3.6",
+    "vitest": "4.1.11"
+  },
+  "dependencies": {
+    "@node-rs/argon2": "2.2.1",
+    "drizzle-orm": "0.45.3",
+    "oauth4webapi": "3.8.8",
+    "pg": "8.23.0",
+    "postgres": "3.4.9",
+    "zod": "4.6.5"
+  },
+  "engines": {
+    "node": ">=24.19.0 <25"
+  },
+  "packageManager": "pnpm@11.19.0"
+}

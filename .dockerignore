@@ -1,0 +1,10 @@
+.git
+.env
+.env.*
+.local
+.superpowers
+node_modules
+.svelte-kit
+build
+docs
+outputs
