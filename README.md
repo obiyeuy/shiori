@@ -1,6 +1,6 @@
 # 个人综合站
 
-从 [文档导航](docs/README.md) 阅读已批准设计和实施计划。P0 工程基础已完成本地验收；P1 增加内容编辑与发布链；公开站和完整工作台属于后续阶段，当前首页/工作台只是基础占位。
+从 [文档导航](docs/README.md) 阅读已批准设计和实施计划。P0–P4 已分别完成本地验证与提交。完整验收入口见 [追踪矩阵](docs/acceptance/traceability.md) 和 [上线门禁](docs/operations/deployment-checklist.md)；真实服务器、第三方配置及人工验收尚未完成，不部署。
 
 使用 Node 24.19.0、pnpm 11.19.0。依赖版本和操作边界见 [工具链](docs/engineering/toolchain.md)，测试证据见 [P0 验证报告](docs/verification/P0.md)。
 
@@ -14,16 +14,15 @@
 6. 为当前命令临时设置 `OWNER_PASSWORD` 后运行 `pnpm db:init-owner`，完成后从 shell 移除该变量。初始化只能创建唯一站长，没有公网注册/初始化接口。
 7. `pnpm dev --host 127.0.0.1`，访问 `/login`。本地 HTTP Cookie 仅在回环开发环境允许不带 Secure；服务器必须 HTTPS。
 
-可选 `pnpm db:search-index` 单独安装 pg_trgm/标题索引；没有扩展权限不影响基础迁移。P2 才实现中文搜索和有界字面回退。
+可选 `pnpm db:search-index` 单独安装 pg_trgm/标题索引；没有扩展权限不影响基础迁移。公开搜索支持中文与有界字面回退。
 
 ## 验证
 
 ```sh
-pnpm test
-pnpm typecheck
+node scripts/verify-retained.mjs --tests --build
 pnpm lint
-pnpm build
-docker compose --env-file .env build web
+# Optional production browser matrix, retains all output:
+node scripts/verify-retained.mjs --acceptance
 ```
 
 `pnpm test` 必须提供独立本地 `DATABASE_URL`，真实 PostgreSQL 测试会建立并保留新 schema，不跳过数据库测试、不删除历史测试数据。HTTP 测试使用回环端口 5199。单独运行无需数据库的检查用 `pnpm test:unit`。
@@ -32,6 +31,6 @@ docker compose --env-file .env build web
 
 ## 内容生产链
 
-新建/导入入口 `/workspace/import-export`，编辑器可保存版本、预览、导出与发布/排期。运行前显式执行 `pnpm db:migrate` 安装 P1 增量结构。媒体目录及排期 worker 的配置、接口和保护规则见 [内容生产链](docs/engineering/content-pipeline.md)。P2 尚未提供公开详情页面，发布结果的公开地址供后续阶段接入。
+新建/导入入口 `/workspace/import-export`，编辑器可保存版本、预览、导出与发布/排期。运行前显式执行 `pnpm db:migrate` 安装 P1 增量结构。媒体目录及排期 worker 的配置、接口和保护规则见 [内容生产链](docs/engineering/content-pipeline.md)。公开详情、搜索、RSS 与工作台现已接入；备份与部署说明见 [运行手册](docs/operations/runbook.md)。
 
 浏览器验证需要本机 Chrome（默认 macOS 安装路径，可设置 `CHROME_EXECUTABLE`），端口 5201。测试使用持久 profile 并保留，不自动删除文件或目录。
