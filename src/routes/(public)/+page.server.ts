@@ -1,0 +1,1 @@
+import {getHomeData} from '$lib/server/public-queries';import {getDb} from '$lib/server/db/client';import type {PageServerLoad} from './$types';export const load:PageServerLoad=async()=>getHomeData(getDb());

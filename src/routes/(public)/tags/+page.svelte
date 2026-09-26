@@ -1,0 +1,1 @@
+<script lang="ts">let {data}=$props();</script><svelte:head><title>标签 · 个人综合站</title></svelte:head><main><h1>标签</h1>{#if !data.items.length}<p>暂无公开标签。</p>{:else}<ul>{#each data.items as item}<li><a href={`/tags/${item.id}`}>{item.name}</a> · {item.count} 篇公开内容</li>{/each}</ul>{/if}</main><style>main{max-width:900px;margin:auto}li{padding:12px}</style>

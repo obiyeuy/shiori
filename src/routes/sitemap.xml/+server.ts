@@ -1,0 +1,2 @@
+import {getDb} from '$lib/server/db/client';import {sitemapDocument} from '$lib/server/public-feed';import {runtimeConfigFromEnv} from '$lib/server/config';import type {RequestHandler} from './$types';
+export const GET:RequestHandler=async()=>new Response(await sitemapDocument(getDb(),runtimeConfigFromEnv().publicSiteUrl),{headers:{'content-type':'application/xml; charset=utf-8','cache-control':'no-store'}});

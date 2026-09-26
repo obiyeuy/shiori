@@ -1,3 +1,4 @@
+import {resolve} from 'node:path';
 import {spawn,type ChildProcess} from 'node:child_process';
 import {mkdir} from 'node:fs/promises';
 import {randomUUID} from 'node:crypto';
@@ -12,7 +13,9 @@ const base='http://127.0.0.1:5201';const evidence='.superpowers/sdd/个人综合
 beforeAll(async()=>{
  db=await testDatabase();await initializeOwner(db,{password:'p1-browser-owner-password'});
  const repo=new ContentRepository(db);id=await repo.createContent('article');await repo.saveDraft(id,{title:'浏览器测试',body:'# 正文\n\n开始',slug:'browser-example'},0);
- server=spawn(process.execPath,['node_modules/vite/bin/vite.js','--host','127.0.0.1','--port','5201','--strictPort'],{env:{...process.env,PGOPTIONS:db.options.options,NODE_ENV:'development',PUBLIC_SITE_URL:base,SESSION_SECRET:'browser-test-secret-not-production-12345'},stdio:'pipe'});
+ const verificationRoot=process.env.SITE_VERIFY_ROOT?resolve(process.env.SITE_VERIFY_ROOT,'editor-browser'):undefined;
+ if(verificationRoot)await mkdir(verificationRoot,{recursive:true});
+ server=spawn(process.execPath,['node_modules/vite/bin/vite.js','--host','127.0.0.1','--port','5201','--strictPort'],{env:{...process.env,...(verificationRoot?{SITE_VERIFY_ROOT:verificationRoot}:{}),PGOPTIONS:db.options.options,NODE_ENV:'development',PUBLIC_SITE_URL:base,SESSION_SECRET:'browser-test-secret-not-production-12345'},stdio:'pipe'});
  server.stdout?.on('data',x=>{serverLog+=x;});server.stderr?.on('data',x=>{serverLog+=x;});
  for(let i=0;i<200;i++){if(server.exitCode!==null)throw new Error(serverLog);try{if((await fetch(base+'/login')).ok)break;}catch{/* startup */}await new Promise(r=>setTimeout(r,100));}
  await mkdir('.local/browser-profiles',{recursive:true});

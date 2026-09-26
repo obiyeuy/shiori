@@ -1,0 +1,16 @@
+<script lang="ts">
+ import type {Snippet} from 'svelte';import {onMount} from 'svelte';
+ import '$lib/components/ui/tokens.css';
+ let {children,tools=false}:{children:Snippet;tools?:boolean}=$props();let theme=$state('system');
+ function setTheme(value:string){theme=value;document.documentElement.dataset.theme=value;try{localStorage.setItem('theme',value);}catch{/* preference storage optional */}}
+ onMount(()=>{try{const value=localStorage.getItem('theme');if(value&&['light','dark','system'].includes(value))setTheme(value);}catch{/* system fallback */}});
+</script>
+<svelte:head><meta name="color-scheme" content="light dark" /></svelte:head>
+<a class="skip" href="#public-main">跳到主要内容</a>
+<nav aria-label="主要导航"><a class="brand" href="/">个人综合站</a><a href="/articles">文章</a><a href="/notes">笔记</a><a href="/moments">动态</a><a href="/projects">作品</a>{#if tools}<a href="/tools">工具</a>{/if}<a href="/search">搜索</a><details><summary>更多</summary><div class="menu"><a href="/resources">资源</a><a href="/tags">标签</a><a href="/series">系列</a><a href="/about">关于</a></div></details><label class="theme">主题<select aria-label="主题" value={theme} onchange={e=>setTheme(e.currentTarget.value)}><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></nav>
+<div class="public-shell" id="public-main">{@render children()}</div><footer><section><h2>内容</h2><a href="/articles">文章</a><a href="/notes">笔记</a><a href="/moments">动态</a><a href="/projects">作品</a><a href="/resources">资源</a></section><section><h2>连接</h2><a href="/rss.xml">RSS 订阅</a></section><section><h2>站点</h2><a href="/about">关于</a><a href="/privacy">隐私说明</a><a href="/login">登录工作台</a><p>© {new Date().getFullYear()} 个人综合站</p><p>内容使用请参阅各篇署名与许可说明。</p></section></footer>
+<style>
+ :global(body){background:var(--canvas)}nav{min-height:64px;display:flex;align-items:center;gap:16px;padding:8px max(16px,calc((100vw - 1280px)/2));flex-wrap:wrap;background:var(--surface);border-bottom:1px solid var(--line)}nav a,summary{min-height:44px;display:inline-flex;align-items:center}.brand{font-weight:700;color:var(--text);margin-right:auto}.public-shell{max-width:1280px;margin:auto;padding:24px 16px;min-height:70vh}footer{max-width:1280px;margin:auto;padding:32px 16px;display:flex;gap:24px;flex-wrap:wrap;color:var(--muted)}footer section{flex:1;min-width:180px}footer h2{font-size:18px}footer a{min-height:44px;display:block;padding-block:8px}.theme{display:flex;align-items:center;margin:0;gap:8px}.theme select{width:auto}details{position:relative}summary{cursor:pointer}.menu{position:absolute;z-index:5;background:var(--surface);padding:16px;min-width:120px;box-shadow:0 2px 12px #0002}.menu a{display:flex}.skip{position:absolute;transform:translateY(-200%);padding:12px;background:var(--surface);z-index:10}.skip:focus{transform:none}@media(max-width:767px){nav{gap:12px}.brand{flex-basis:100%}}
+ :global(html[data-theme=dark]){color-scheme:dark;--canvas:#171522;--surface:#221E30;--soft:#2D273E;--text:#F5F1FA;--muted:#B9AFC9;--border:#8A7E9D;--line:#443A55;--primary:#B5A6FF;--on-primary:#241A46;--focus:#C5B9FF}
+ :global(html[data-theme=light]){color-scheme:light;--canvas:#FBF9F7;--surface:#fff;--soft:#F1EDF9;--text:#272334;--muted:#686174;--border:#827A91;--line:#E5DFEB;--primary:#6D5CE7;--on-primary:#fff;--focus:#5945C5}
+</style>

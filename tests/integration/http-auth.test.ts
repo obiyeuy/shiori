@@ -1,3 +1,5 @@
+import {mkdir} from 'node:fs/promises';
+import {resolve} from 'node:path';
 import { spawn, type ChildProcess } from 'node:child_process';
 import { beforeAll, afterAll, it, expect } from 'vitest';
 import type { Pool } from 'pg';
@@ -6,7 +8,9 @@ import { initializeOwner } from '../../src/lib/server/auth/service.js';
 let db:Pool;let server:ChildProcess;const base='http://127.0.0.1:5199';
 beforeAll(async()=>{
  db=await testDatabase();await initializeOwner(db,{password:'http-test-owner-password'});
- server=spawn(process.execPath,['node_modules/vite/bin/vite.js','--host','127.0.0.1','--port','5199','--strictPort'],{env:{...process.env,PGOPTIONS:db.options.options,NODE_ENV:'development',PUBLIC_SITE_URL:base,SESSION_SECRET:'http-test-secret-not-for-production-12345'},stdio:'pipe'});
+ const verificationRoot=process.env.SITE_VERIFY_ROOT?resolve(process.env.SITE_VERIFY_ROOT,'http-auth'):undefined;
+ if(verificationRoot)await mkdir(verificationRoot,{recursive:true});
+ server=spawn(process.execPath,['node_modules/vite/bin/vite.js','--host','127.0.0.1','--port','5199','--strictPort'],{env:{...process.env,...(verificationRoot?{SITE_VERIFY_ROOT:verificationRoot}:{}),PGOPTIONS:db.options.options,NODE_ENV:'development',PUBLIC_SITE_URL:base,SESSION_SECRET:'http-test-secret-not-for-production-12345'},stdio:'pipe'});
  let log='';server.stdout?.on('data',x=>{log+=x;});server.stderr?.on('data',x=>{log+=x;});
  for(let i=0;i<100;i++){if(server.exitCode!==null)throw new Error('HTTP server exited: '+log);try{if((await fetch(base+'/login')).ok)return;}catch{/* wait for startup */}await new Promise(r=>setTimeout(r,100));}
  throw new Error('HTTP server startup timed out: '+log);

@@ -1,0 +1,1 @@
+<script lang="ts">import Listing from '$lib/components/public/Listing.svelte';import {publicLabels} from '$lib/content/public';let {data}=$props();</script><Listing title={publicLabels['tool']} items={data.items} page={data.page} total={data.total} path="/tools" tags={data.tags} selected={data.selected} />
