@@ -7,6 +7,14 @@ export type DraftInput = {
   body?: string;
   slug?: string;
   summary?: string;
+  cover?: string;
+  tags?: string[];
+  commentsEnabled?: boolean;
+  gallery?: string[];
+  related?: string[];
+  demoUrl?: string;
+  codeUrl?: string;
+  author?: string;
   description?: string;
   projectStatus?: 'in-progress' | 'completed' | 'paused' | 'stopped';
   unavailableReason?: string;

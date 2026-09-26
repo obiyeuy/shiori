@@ -14,3 +14,10 @@ describe('draft validation', () => {
     expect(validateDraft({ type: 'article', title: 'A', body: 'B', slug: '中文 标题' }, 'publish').ok).toBe(false);
   });
 });
+
+it('P1 media/tags/comment fields remain typed and type-specific',()=>{
+ expect(validateDraft({type:'article',cover:'01234567-89ab-4def-8123-456789abcdef',tags:[],commentsEnabled:true},'draft').ok).toBe(true);
+ expect(validateDraft({type:'article',cover:'../x'} as any,'draft').ok).toBe(false);
+ expect(validateDraft({type:'article',tags:['not-id']} as any,'draft').ok).toBe(false);
+ expect(validateDraft({type:'article',commentsEnabled:'yes'} as any,'draft').ok).toBe(false);
+});

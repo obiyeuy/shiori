@@ -22,7 +22,23 @@ services:
       PUBLIC_SITE_URL: ${PUBLIC_SITE_URL:-http://127.0.0.1:5173}
       ORIGIN: ${PUBLIC_SITE_URL:-http://127.0.0.1:5173}
       NODE_ENV: production
+      MEDIA_ROOT: /data/media
+      BODY_SIZE_LIMIT: 110M
+    volumes: ["${MEDIA_ROOT_PATH:-./.local/media}:/data/media"]
     ports: ["127.0.0.1:5173:3000"]
+    depends_on:
+      db: {condition: service_healthy}
+  schedule-worker:
+    profiles: [pipeline]
+    build: .
+    command: ["node", "node_modules/tsx/dist/cli.mjs", "scripts/schedule-worker.ts"]
+    environment:
+      DATABASE_URL: postgres://personal_site:${POSTGRES_PASSWORD}@db:5432/${APP_DATABASE_NAME:-personal_site}
+      SESSION_SECRET: ${SESSION_SECRET:?Set session secret}
+      PUBLIC_SITE_URL: ${PUBLIC_SITE_URL:-http://127.0.0.1:5173}
+      NODE_ENV: production
+      MEDIA_ROOT: /data/media
+    volumes: ["${MEDIA_ROOT_PATH:-./.local/media}:/data/media"]
     depends_on:
       db: {condition: service_healthy}
 volumes:

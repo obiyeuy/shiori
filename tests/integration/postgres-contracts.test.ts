@@ -12,6 +12,7 @@ beforeAll(async () => {
  await pool.end();
  db=new Pool({connectionString:process.env.DATABASE_URL,options:`-c search_path=${schema}`});
  await db.query(await readFile('drizzle/0000_initial.sql','utf8'));
+ await db.query(await readFile('drizzle/0001_content_pipeline.sql','utf8'));
 });
 let db: Pool;
 afterAll(async()=>{await db?.end();});

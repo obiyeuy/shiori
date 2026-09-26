@@ -5,7 +5,7 @@ import { resolveSession } from './lib/server/auth/service.js';
 import { verifyCsrf } from './lib/server/auth/session.js';
 const privateHeaders={
  'cache-control':'private, no-store',
- 'referrer-policy':'no-referrer',
+ 'referrer-policy':'same-origin',
  'x-content-type-options':'nosniff'
 };
 export const handle:Handle=async({event,resolve})=>{

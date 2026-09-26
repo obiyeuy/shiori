@@ -16,12 +16,18 @@ export function validateDraft(input: DraftInput, mode: 'draft' | 'publish' = 'dr
   const errors: { field: string; message: string }[] = [];
   const add = (field: string, message: string) => errors.push({field, message});
   if (!input || !contentTypes.includes(input.type)) return {ok:false,errors:[{field:'type',message:'unsupported content type'}]};
-  const common=['type','title','body','slug','summary'];
-  const specific:Record<string,string[]>={article:[],note:[],moment:[],project:['description','projectStatus'],tool:['description','toolStatus','toolUrl','unavailableReason'],resource:['description','sourceName','sourceUrl']};
+  const common=['type','title','body','slug','summary','cover','tags','commentsEnabled','related'];
+  const specific:Record<string,string[]>={article:[],note:[],moment:[],project:['description','projectStatus','gallery','demoUrl','codeUrl'],tool:['description','toolStatus','toolUrl','unavailableReason'],resource:['description','sourceName','sourceUrl','author']};
   const allowed=new Set([...common,...specific[input.type]]);
   for(const key of Object.keys(input))if(!allowed.has(key))add(key,'unknown or type-inapplicable field');
   const textFields = ['title','body','slug','summary','description','projectStatus','toolStatus','toolUrl','unavailableReason','sourceName','sourceUrl'] as const;
   for (const field of textFields) if (input[field] !== undefined && typeof input[field] !== 'string') add(field, 'must be text');
+  const uuid=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
+  if(input.cover!==undefined && (typeof input.cover!=='string'||(input.cover!==''&&!uuid.test(input.cover))))add('cover','invalid media key');
+  for(const field of ['tags','gallery','related'] as const){const value=input[field];if(value!==undefined&&(!Array.isArray(value)||value.length>100||value.some(x=>typeof x!=='string'||!uuid.test(x))))add(field,'invalid references');}
+  if(input.commentsEnabled!==undefined&&typeof input.commentsEnabled!=='boolean')add('commentsEnabled','must be boolean');
+  for(const field of ['demoUrl','codeUrl'] as const)if(input[field]!==undefined&&(typeof input[field]!=='string'||(input[field]!==''&&!safePublicUrl(input[field]!))))add(field,'invalid URL');
+  if(input.author!==undefined&&(typeof input.author!=='string'||input.author.length>120))add('author','invalid author');
   if (errors.length) return {ok:false,errors};
   if (input.body && Buffer.byteLength(input.body,'utf8') > 1024*1024) add('body','maximum 1 MiB');
   if (mode === 'publish') {

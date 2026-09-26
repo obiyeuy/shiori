@@ -10,6 +10,9 @@ WORKDIR /app
 COPY --from=builder --chown=node:node /app/build ./build
 COPY --from=builder --chown=node:node /app/package.json ./package.json
 COPY --from=builder --chown=node:node /app/node_modules ./node_modules
+COPY --from=builder --chown=node:node /app/src ./src
+COPY --from=builder --chown=node:node /app/scripts ./scripts
+COPY --from=builder --chown=node:node /app/drizzle ./drizzle
 USER node
 ENV NODE_ENV=production HOST=0.0.0.0 PORT=3000
 EXPOSE 3000
