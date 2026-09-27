@@ -1,6 +1,6 @@
 <script lang="ts">
  import ContentList from './ContentList.svelte';import type {PublicRow} from '$lib/content/public';
- let {title,items,page,total,path,tags=[],selected=[],variant='list'}:{title:string;items:PublicRow[];page:number;total:number;path:string;tags?:{id:string;name:string}[];selected?:string[];variant?:'list'|'projects'}=$props();
+ let {title,items,page,total,path,tags=[],selected=[],variant='list'}:{title:string;items:PublicRow[];page:number;total:number;path:string;tags?:{id:string;name:string}[];selected?:string[];variant?:'list'|'projects'|'moments'}=$props();
  function pageHref(next:number){const params=new URLSearchParams();for(const id of selected)params.append('tag',id);if(next>1)params.set('page',String(next));return path+(params.size?'?'+params:'');}
 </script>
 <svelte:head><title>{title} · 个人综合站</title><link rel="canonical" href={`${path}${page>1?`?page=${page}`:''}`} />{#if selected.length}<meta name="robots" content="noindex,follow" />{/if}</svelte:head>
