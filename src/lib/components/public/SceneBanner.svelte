@@ -1,12 +1,12 @@
 <script lang="ts">
  export type Banner = {desktop:string|null;mobile:string|null;x:number;y:number;credit:string;source:string};
- let {siteName,banner=null,backdrop=true}:{siteName:string;banner?:Banner|null;backdrop?:boolean}=$props();
+ let {siteName,banner=null}:{siteName:string;banner?:Banner|null}=$props();
  let failed=$state(false);
  const custom=$derived(Boolean(banner?.desktop));
  const src=$derived(custom?`/media/public/${banner!.desktop}`:'/images/makeine-img_visual03.jpg');
 </script>
 <section class="scene" aria-label="欢迎" class:failed>
- {#if !failed}{#if backdrop}<div class="atmosphere" style:background-image={`url("${src}")`} aria-hidden="true"></div>{/if}<picture class:custom>
+ {#if !failed}<div class="atmosphere" style:background-image={`url("${src}")`} aria-hidden="true"></div><picture class:custom>
  {#if custom && banner?.mobile}<source media="(max-width:767px)" srcset={`/media/public/${banner.mobile}`} />{/if}
  <img {src} alt={custom?'站点场景':'八奈见杏菜在甜点店'} fetchpriority="high" width="1590" height="2250" style:object-position={custom?`${banner!.x}% ${banner!.y}%`:'center 23%'} onerror={()=>failed=true} />
  </picture>{/if}
