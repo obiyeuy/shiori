@@ -1,15 +1,5 @@
-<script lang="ts">
- import type { ActionData } from './$types';
- let {form}:{form:ActionData}=$props();
-</script>
+<script lang="ts">import type {ActionData} from './$types';let {form}:{form:ActionData}=$props();</script>
 <svelte:head><title>站长登录</title></svelte:head>
-<main>
- <h1>站长登录</h1>
- {#if form?.message}<p role="alert">{form.message}</p>{/if}
- <form method="post">
-  <label for="password">密码</label>
-  <input id="password" name="password" type="password" autocomplete="current-password" required maxlength="1024" />
-  <button type="submit">登录</button>
- </form>
- <a href="/auth/github">使用 GitHub 登录</a>
-</main>
+<main class="login-page"><a class="back" href="/">← 返回公开站</a><section class="login-card"><p class="eyebrow">PRIVATE AREA</p><h1>欢迎回来。</h1><p class="muted">登录后进入内容编辑与站点管理。</p>{#if form?.message}<p class="alert" role="alert">{form.message}</p>{/if}<form method="post"><label for="password">站长密码<input id="password" name="password" type="password" autocomplete="current-password" required maxlength="1024" /></label><button class="primary" type="submit">登录工作台 <span aria-hidden="true">→</span></button></form><div class="divider"><span>或</span></div><a class="github" href="/auth/github">使用 GitHub 登录</a></section></main>
+<style>:global(body){background:var(--canvas)}.login-page{min-height:100dvh;display:grid;place-items:center;padding:24px}.back{position:absolute;top:24px;left:24px;color:var(--muted);text-decoration:none}.login-card{width:min(100%,440px);padding:40px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow-md)}.eyebrow{margin:0 0 12px;color:var(--primary);font:700 12px/1.2 'JetBrains Mono',monospace;letter-spacing:.14em}.login-card h1{margin:0;font-size:42px;letter-spacing:-.05em}.login-card>.muted{margin:10px 0 28px}.alert{padding:12px 14px;border-radius:var(--radius-sm);background:color-mix(in srgb,var(--error) 12%,var(--surface));color:var(--error)}form{display:grid;gap:20px}label{margin:0;font-weight:700}label input{margin-top:7px}.primary{width:100%;background:var(--primary);color:var(--on-primary);border-color:transparent;font-weight:700}.divider{display:flex;align-items:center;gap:12px;margin:24px 0;color:var(--muted);font-size:13px}.divider::before,.divider::after{content:'';height:1px;flex:1;background:var(--line)}.github{display:flex;justify-content:center;align-items:center;min-height:44px;padding:8px 12px;border:1px solid var(--line);border-radius:var(--radius-sm);color:var(--text);text-decoration:none;font-weight:700}.github:hover{background:var(--soft)}@media(max-width:767px){.login-page{padding:16px}.login-card{padding:28px 20px}.back{top:16px;left:16px}.login-card h1{font-size:36px}}
+</style>
