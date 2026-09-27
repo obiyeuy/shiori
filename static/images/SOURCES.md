@@ -8,3 +8,4 @@
 - [官方作品与图片页面](https://www.ghibli.jp/works/chihiro/)
 - [官方提供说明](https://www.ghibli.jp/info/013344/)：“常識の範囲でご自由にお使いください。”（请在常识范围内自由使用。）并非 CC0 或版权转让。
 - 官方版权署名：© 2001 Studio Ghibli・NDDTM。
+- `makeine-anna.png`：[官方头像下载页](https://makeine-anime.com/special/icon_dl/) · `icon_10_anna_1.png` · ©雨森たきび／小学館／マケイン応援委員会
