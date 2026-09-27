@@ -1,6 +1,7 @@
-name: personal-site-production
+name: personal-site
 services:
   db:
+    container_name: personal-site-db
     image: postgres:16-bookworm@sha256:efedf3595f1d6f415c08568ba171029bf54052e754cc9f030e3f2412b21f3d67
     restart: unless-stopped
     environment:
@@ -16,6 +17,13 @@ services:
       retries: 10
     logging: {driver: none}
   web:
+    container_name: personal-site-web
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://127.0.0.1:3000/').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 10s
     image: ${SITE_IMAGE:?Set a reviewed immutable image digest}
     restart: unless-stopped
     user: "1000:1000"
@@ -37,6 +45,7 @@ services:
     depends_on: {db: {condition: service_healthy}}
     logging: {driver: none}
   migrate:
+    container_name: personal-site-migrate
     profiles: [maintenance]
     image: ${SITE_IMAGE:?Set a reviewed immutable image digest}
     user: "1000:1000"
@@ -46,6 +55,7 @@ services:
     depends_on: {db: {condition: service_healthy}}
     logging: {driver: none}
   scheduler:
+    container_name: personal-site-scheduler
     profiles: [jobs]
     image: ${SITE_IMAGE:?Set a reviewed immutable image digest}
     user: "1000:1000"
@@ -60,5 +70,7 @@ services:
     logging: {driver: none}
 volumes:
   production-db:
+    name: ${DB_VOLUME_NAME:-personal-site-db}
+    external: ${DB_VOLUME_EXTERNAL:-false}
 networks:
   site-internal:
