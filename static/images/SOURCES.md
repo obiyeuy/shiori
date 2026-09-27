@@ -11,3 +11,4 @@
 - `makeine-anna.png`：[官方头像下载页](https://makeine-anime.com/special/icon_dl/) · `icon_10_anna_1.png` · ©雨森たきび／小学館／マケイン応援委員会
 
 - `makeine-img_visual03.jpg`：[动画官网首页场景素材](https://makeine-anime.com/assets/img/top/main/img_visual03.jpg) · ©雨森たきび／小学館／マケイン応援委員会
+- `makeine-img_visual04.jpg`, `makeine-img_visual05.jpg`, `makeine-img_visual07.jpg`, `makeine-img_visual08.jpg`, `makeine-img_visual09.jpg`, `makeine-kv_visual06.jpg`：动画官网公开场景素材，来源 `https://makeine-anime.com/assets/img/top/main/` · ©雨森たきび／小学館／マケイン応援委員会
