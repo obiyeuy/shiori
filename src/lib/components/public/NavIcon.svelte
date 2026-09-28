@@ -1,6 +1,8 @@
 <script lang="ts">
  let {name,size=18}:{name:string;size?:number}=$props();
  const paths:Record<string,string>={
+ type:'M3 5h12 M9 5v15 M5 20h8 M15 12h7 M18.5 12v8',
+ palette:'M12 3a9 9 0 1 0 0 18h1a2 2 0 0 0 1-3.7 1.5 1.5 0 0 1 1-2.8H18a4 4 0 0 0 3-4A9 9 0 0 0 12 3 M7 10h.01 M10 7h.01 M15 7h.01 M18 10h.01',
  articles:'M4 3h12l4 4v14H4z M8 8h4 M8 12h8 M8 16h8',
  notes:'M4 4h10 M4 4v16h16v-9 M10 14l1-4 8-8 3 3-8 8z',
  moments:'M21 11a9 9 0 0 1-9 9H4l-3 2 2-6a9 9 0 1 1 18-5 M7 11h.01 M12 11h.01 M17 11h.01',
