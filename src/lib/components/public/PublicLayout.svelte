@@ -50,7 +50,7 @@
  function setMotion(value:boolean){reducedMotion=value;document.documentElement.dataset.motion=value?'reduced':'full';try{localStorage.setItem('motion',value?'reduced':'full');}catch{/* optional */}}
  onMount(()=>{try{const value=localStorage.getItem('theme');if(value&&['light','dark','system'].includes(value))setTheme(value);const savedBackdrop=localStorage.getItem('scene-background');if(savedBackdrop!==null)backdrop=savedBackdrop!=='false';document.documentElement.dataset.sceneBackground=String(backdrop);const motion=localStorage.getItem('motion');if(motion==='reduced')setMotion(true);const savedHue=localStorage.getItem('color-hue');if(savedHue&&Number.isFinite(Number(savedHue)))setHue(Number(savedHue));const savedFont=localStorage.getItem('font-size');if(savedFont&&['small','normal','large'].includes(savedFont))setFontSize(savedFont);}catch{/* optional */}return cancelClose;});
 </script>
-<svelte:window bind:scrollY onkeydown={e=>{if(e.key==='Escape'){settingsOpen=false;moreOpen=false;}}} onpointerdown={e=>{if(settingsOpen&&!(e.target as Element)?.closest('#theme-colors,.color-trigger'))settingsOpen=false;}} />
+<svelte:window bind:scrollY onpointermove={pointerMoved} onkeydown={e=>{if(e.key==='Escape'){settingsOpen=false;moreOpen=false;}}} onpointerdown={e=>{if(settingsOpen&&!(e.target as Element)?.closest('#theme-colors,.color-trigger'))settingsOpen=false;}} />
 <svelte:head><meta name="color-scheme" content="light dark" /></svelte:head>
 <a class="skip" href="#public-main">跳到主要内容</a>
 <header class="site-header" class:scene-header={showScene} class:over-scene={showScene && scrollY<sceneThreshold && !menuOpen}>
