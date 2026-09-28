@@ -1,0 +1,2 @@
+import {describe,it,expect} from 'vitest';import {readFileSync} from 'node:fs';
+describe('navidrome proxy',()=>{it('keeps credentials server-side and does not autoplay',()=>{const c=readFileSync('src/lib/server/music/navidrome.ts','utf8');expect(c).toContain('$env/dynamic/private');const p=readFileSync('src/lib/components/public/MusicPlayer.svelte','utf8');expect(p).not.toContain('autoplay');});it('supports range forwarding',()=>expect(readFileSync('src/lib/server/music/navidrome.ts','utf8')).toContain("request.headers.get('range')"));});

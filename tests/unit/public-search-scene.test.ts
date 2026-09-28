@@ -1,0 +1,2 @@
+import {describe,it,expect} from 'vitest';import {readFileSync} from 'node:fs';
+describe('search and scene',()=>{it('has workspace and restrained wave layers',()=>{const s=readFileSync('src/routes/search/+page.svelte','utf8');expect(s).toContain('search-workspace');const b=readFileSync('src/lib/components/public/SceneBanner.svelte','utf8');expect((b.match(/class="wave/g)||[]).length).toBe(2);});});

@@ -1,0 +1,2 @@
+import {describe,it,expect} from 'vitest';import {readFileSync,existsSync} from 'node:fs';
+describe('site metadata',()=>{it('declares abstract favicon assets',()=>{const html=readFileSync('src/app.html','utf8');expect(html).toContain('favicon.svg');expect(html).toContain('site.webmanifest');expect(existsSync('static/favicon.svg')).toBe(true);const svg=readFileSync('static/favicon.svg','utf8');expect(svg).toContain('window-mark');expect(svg).not.toContain('makeine');});});

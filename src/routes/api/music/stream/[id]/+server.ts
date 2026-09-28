@@ -1,0 +1,1 @@
+import {streamSong} from '$lib/server/music/navidrome';import {json} from '@sveltejs/kit';export async function GET({params,request}){try{return await streamSong(params.id,request)}catch(e){return json({error:e instanceof Error?e.message:'音乐服务暂不可用'},{status:503})}}

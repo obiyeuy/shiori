@@ -34,6 +34,9 @@ services:
       NODE_ENV: production
       MEDIA_ROOT: /data/media
       BODY_SIZE_LIMIT: 110M
+      NAVIDROME_URL: ${NAVIDROME_URL:-http://49.233.199.110:4533}
+      NAVIDROME_USER: ${NAVIDROME_USER:-}
+      NAVIDROME_PASSWORD: ${NAVIDROME_PASSWORD:-}
     volumes: ["${MEDIA_ROOT_PATH:-./.local/media}:/data/media"]
     ports: ["127.0.0.1:${SITE_PORT:-5173}:3000"]
     depends_on:

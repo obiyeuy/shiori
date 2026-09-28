@@ -1,0 +1,1 @@
+import {json} from '@sveltejs/kit';import {listSongs} from '$lib/server/music/navidrome';export async function GET(){try{return json({items:await listSongs()},{headers:{'cache-control':'private, max-age=60'}})}catch(e){return json({error:e instanceof Error?e.message:'音乐服务暂不可用'},{status:503})}}

@@ -1,0 +1,11 @@
+<script lang="ts">
+ import {onMount} from 'svelte';
+ type Track={id:string;title:string;artist:string;streamUrl:string;duration?:number};let tracks=$state<Track[]>([]);let index=$state(0);let audio=$state<HTMLAudioElement>();let error=$state('');let playing=$state(false);let progress=$state(0);
+ const current=$derived(tracks[index]);
+ async function load(){try{const r=await fetch('/api/music/playlist');const j=await r.json();if(!r.ok)throw new Error(j.error);tracks=j.items??[];if(!tracks.length)error='暂无可播放曲目';}catch(e){error=e instanceof Error?e.message:'音乐服务暂不可用';}}
+ function toggle(){if(!audio||!current)return;if(audio.paused)audio.play().then(()=>playing=true).catch(()=>error='浏览器阻止了播放，请点击播放');else{audio.pause();playing=false}}
+ function next(){if(!tracks.length)return;index=(index+1)%tracks.length;playing=false}
+ onMount(()=>{load();return()=>audio?.pause()});
+</script>
+<section class="music-player" aria-label="音乐播放器"><p class="kicker">LISTENING ROOM</p>{#if current}<strong>{current.title}</strong><small>{current.artist}</small><audio bind:this={audio} src={current.streamUrl} ontimeupdate={()=>progress=audio?.currentTime??0} onended={next} preload="metadata"></audio><div class="controls"><button type="button" onclick={toggle} aria-label={playing?'暂停':'播放'}>{playing?'Ⅱ':'▶'}</button><input aria-label="播放进度" type="range" min="0" max={audio?.duration||current.duration||100} value={progress} oninput={e=>{if(audio)audio.currentTime=Number(e.currentTarget.value)}} /><button type="button" onclick={next} aria-label="下一首">›</button></div>{#if tracks.length>1}<small>{index+1} / {tracks.length}</small>{/if}{:else}<p class="muted">{error||'正在读取音乐…'}</p>{/if}{#if error&&current}<p class="error">{error}</p>{/if}</section>
+<style>.music-player{padding:0 0 18px;border-bottom:1px solid var(--line)}.kicker{margin:0 0 8px;color:var(--primary);font:10px/1.4 'DM Mono',monospace;letter-spacing:.14em}.music-player strong{display:block;font-size:14px;line-height:1.4}.music-player small{display:block;color:var(--muted);font-size:11px}.controls{display:flex;align-items:center;gap:7px;margin-top:10px}.controls button{border:0;background:var(--soft);min-height:30px;width:30px;padding:0;border-radius:50%}.controls input{min-height:4px;padding:0}.error{color:var(--error);font-size:11px}.muted{color:var(--muted);font-size:12px;margin:0}</style>
