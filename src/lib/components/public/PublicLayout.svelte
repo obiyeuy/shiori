@@ -91,6 +91,5 @@
 @media(max-width:760px){.site-header,.site-header.scene-header{top:8px;inset-inline:8px;margin:0;border-radius:13px}.desktop-nav{display:none}.menu-toggle{display:block}.mobile-menu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:9px 12px;gap:5px;background:var(--surface);border-top:1px solid var(--line);border-radius:0 0 13px 13px}.mobile-menu a{display:flex;align-items:center;gap:8px;padding:8px;text-decoration:none;color:var(--text);min-height:40px;font-size:0.8125rem}.mobile-menu a.active{background:var(--soft)}.nav-inner{padding-inline:10px;grid-template-columns:1fr auto}.public-shell{display:block;padding:18px 13px 36px}.home-shell{padding-top:16px;margin-top:0}.space-sidebar{display:none}.brand-profile-copy strong{font-size:0.8125rem}.footer-inner{flex-wrap:wrap;padding:22px 16px;gap:12px}.footer-signature{width:100%}}
 .icon-action{display:inline-grid;place-items:center;flex:0 0 40px;width:40px;height:40px;min-height:40px;padding:0;border:0;border-radius:50%;background:transparent;color:inherit}
 .icon-action:hover{background:var(--soft);color:var(--primary)}.over-scene .icon-action:hover{background:#ffffff22;color:white}
-.color-popover 
 @media(max-width:760px){.header-actions{right:10px;gap:2px}}
 </style>
