@@ -5,7 +5,7 @@ html[data-theme=dark]{color-scheme:dark;--canvas:#191725;--surface:#242036;--sur
 
 
 /* Palette controls shared surfaces as well as emphasis; mode controls luminance. */
-:root{--palette-hue:275;--palette-chroma:.14;--tone:oklch(55% var(--palette-chroma) var(--palette-hue));--primary:var(--tone);--focus:oklch(43% var(--palette-chroma) var(--palette-hue));--canvas:oklch(96% .018 var(--palette-hue));--surface:oklch(93% .035 var(--palette-hue));--surface-raised:oklch(95% .03 var(--palette-hue));--soft:oklch(89% .05 var(--palette-hue));--soft-strong:oklch(82% .07 var(--palette-hue));--line:oklch(83% .035 var(--palette-hue));--on-primary:#fff;--panel-bg:linear-gradient(145deg,var(--surface-raised),var(--surface))}
+:root{--palette-hue:275;--palette-chroma:.14;--tone:oklch(55% var(--palette-chroma) var(--palette-hue));--primary:var(--tone);--focus:oklch(43% var(--palette-chroma) var(--palette-hue));--canvas:oklch(96% .018 var(--palette-hue));--surface:oklch(93% .035 var(--palette-hue));--surface-raised:oklch(95% .03 var(--palette-hue));--soft:oklch(89% .05 var(--palette-hue));--soft-strong:oklch(82% .07 var(--palette-hue));--line:oklch(83% .035 var(--palette-hue));--on-primary:#fff;--panel-bg:linear-gradient(145deg,color-mix(in srgb,var(--surface-raised) 78%,transparent),color-mix(in srgb,var(--surface) 72%,transparent))}
 html[data-color=yellow]{--palette-hue:85;--palette-chroma:.115}
 html[data-color=blue]{--palette-hue:235;--palette-chroma:.12}
 html[data-color=pink]{--palette-hue:355;--palette-chroma:.14}
