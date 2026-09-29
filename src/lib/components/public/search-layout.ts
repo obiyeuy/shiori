@@ -1,0 +1,2 @@
+export type SearchConditions={q:string;type:string[];tag:string[]};
+export function searchPageHref(input:SearchConditions,page:number){const params=new URLSearchParams();if(input.q)params.set('q',input.q);for(const type of input.type)params.append('type',type);for(const tag of input.tag)params.append('tag',tag);if(page>1)params.set('page',String(page));const query=params.toString();return `/search${query?`?${query}`:''}`;}
