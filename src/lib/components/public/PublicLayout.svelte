@@ -8,7 +8,7 @@
  import SceneBanner, {type Banner} from './SceneBanner.svelte';
  import ContextSidebar from './ContextSidebar.svelte';
  import MusicPlayer from './MusicPlayer.svelte';
- let {children,tools=false,siteName='个人综合站',intro='记录想法、分享作品，收藏日常。',banner=null,status=null,socialLinks=[],contextKind='listing'}:{children:Snippet;tools?:boolean;siteName?:string;intro?:string;banner?:Banner|null;status?:{text:string;updatedAt:string|null}|null;socialLinks?:{label:string;url:string}[];contextKind?:'home'|'listing'|'detail'|'search'}=$props();
+ let {children,tools=false,siteName='个人综合站',intro='记录想法、分享作品，收藏日常。',banner=null,status=null,socialLinks=[],contextKind='listing'}:{children:Snippet;tools?:boolean;siteName?:string;intro?:string;banner?:Banner|null;status?:{text:string;updatedAt:string|null}|null;socialLinks?:{label:string;url:string}[];contextKind?:'home'|'listing'|'detail'|'collection'|'search'|'static'}=$props();
  let theme=$state('system');let hue=$state(275);let fontSize=$state('normal');let menuOpen=$state(false);let scrollY=$state(0);let settingsOpen=$state(false);let backdrop=$state(true);let reducedMotion=$state(false);
  const home=$derived(page.url.pathname === '/');
  const detail=$derived(/^\/(articles|notes|moments|projects|tools|resources)\/[^/]+/.test(page.url.pathname));
@@ -74,7 +74,7 @@
 <div class="public-shell" class:home-shell={home} class:plain-background={!backdrop} id="public-main">
  <PersonalSpace {siteName} {intro} {status} {socialLinks} />
  <div class="content-column">{@render children()}</div>
- <aside class="context-column"><ContextSidebar kind={home ? 'home' : contextKind} /></aside>
+ <aside class="context-column"><ContextSidebar kind={home ? 'home' : detail ? 'detail' : contextKind} /></aside>
  <MusicPlayer />
 </div>
 <footer><div class="footer-inner"><p class="footer-signature">把好奇心写成记录，把过程留给以后。</p><nav aria-label="页脚导航"><a href="/articles">文章</a><a href="/notes">笔记</a><a href="/projects">作品</a><a href="/about">关于</a><a href="/rss.xml">RSS</a></nav><p class="muted">© {new Date().getFullYear()} {siteName}</p></div></footer>
