@@ -1,0 +1,20 @@
+<script lang="ts">
+ import type {Snippet} from 'svelte';
+ import NavIcon from './NavIcon.svelte';
+ let {siteName,intro,status=null,socialLinks=[],music}:{siteName:string;intro:string;status?:{text:string;updatedAt:string|null}|null;socialLinks?:{label:string;url:string}[];music?:Snippet}=$props();
+</script>
+<aside class="personal-space" aria-label="个人空间">
+ <details class="profile-disclosure" open><summary>认识一下 <span>{siteName}</span></summary><div class="profile-body">
+  <a class="portrait" href="/about" aria-label="关于站主"><img src="/images/makeine-img_visual03.jpg" alt="个人空间插画" width="260" height="220"/></a>
+  <div class="identity"><p class="overline">MY LITTLE CORNER</p><h2>{siteName}</h2><p class="intro">{intro}</p>
+   {#if status}<div class="personal-status"><span class="dot"></span><p>{status.text}{#if status.updatedAt}<time datetime={status.updatedAt}>{new Date(status.updatedAt).toLocaleDateString('zh-CN',{timeZone:'Asia/Shanghai'})}</time>{/if}</p></div>{/if}
+   <nav class="social-links" aria-label="联系与订阅"><a href="/about" aria-label="关于" title="关于"><NavIcon name="about" size={18}/></a><a href="/rss.xml" aria-label="RSS 订阅" title="RSS 订阅"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="5" cy="19" r="1"/><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/></svg></a>{#each socialLinks as link}<a href={link.url} aria-label={link.label} title={link.label} rel="noopener noreferrer"><span>{link.label.slice(0,2)}</span></a>{/each}</nav>
+  </div>
+ </div></details>
+ {#if music}<div class="music-summary">{@render music()}</div>{/if}
+</aside>
+<style>
+.personal-space{align-self:start;min-width:0;border-radius:20px;background:linear-gradient(165deg,color-mix(in srgb,var(--primary) 7%,transparent),transparent 70%);overflow:hidden}.profile-disclosure>summary{display:none}.portrait{display:block;overflow:hidden;border-radius:18px 18px 5px 5px;margin:0}.portrait img{width:100%;height:190px;display:block;object-fit:cover;object-position:center 22%}.identity{padding:22px 18px 14px}.overline{font: .6rem/1.4 'DM Mono',monospace;letter-spacing:.14em;color:var(--primary);margin:0 0 9px}h2{font-size:1.12rem;line-height:1.5;margin:0 0 10px}.intro{font-size:.8rem;color:var(--muted);line-height:1.85;margin:0}.personal-status{display:flex;gap:9px;align-items:start;margin-top:18px}.personal-status p{margin:0;font-size:.78rem}.dot{width:6px;height:6px;border-radius:50%;background:var(--primary);margin-top:8px;flex:none}time{display:block;font-size:.65rem;color:var(--muted);margin-top:5px}.social-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:17px}.social-links a{display:grid;place-items:center;min-width:36px;min-height:36px;border-radius:50%;text-decoration:none;color:var(--muted);font-size:.7rem}.social-links a:hover{background:var(--soft);color:var(--primary)}.music-summary{margin:2px 18px 18px;padding-top:16px;border-top:1px solid var(--line)}
+@media(min-width:761px){.profile-disclosure:not([open])>.profile-body{display:block!important}}
+@media(max-width:760px){.personal-space{margin-bottom:22px;border-radius:12px;background:color-mix(in srgb,var(--primary) 5%,transparent)}.profile-disclosure>summary{display:flex;gap:12px;align-items:center;cursor:pointer;padding:12px 15px;font-size:.75rem;color:var(--muted)}summary span{color:var(--text)}.profile-body{display:grid;grid-template-columns:92px 1fr;gap:10px;padding:0 14px 14px}.portrait{border-radius:10px;align-self:start}.portrait img{height:114px}.identity{padding:0 6px}.overline{display:none}.intro{font-size:.75rem}.music-summary{display:none}}
+</style>
