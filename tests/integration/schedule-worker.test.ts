@@ -2,6 +2,7 @@ import {it,expect,afterAll} from 'vitest';
 import {randomUUID} from 'node:crypto';
 import {testDatabase} from '../helpers/database.js';
 import {ContentRepository} from '../../src/lib/server/content/repository.js';
+import {getCurrentPublicBySlug} from '../helpers/content-fixture.js';
 import {PublicationService} from '../../src/lib/server/publish/service.js';
 const pool=await testDatabase();afterAll(()=>pool.end());const repo=new ContentRepository(pool);const service=new PublicationService(pool);
 it('restarts publish frozen snapshots exactly once and default manual publishing cancels old schedules',async()=>{
@@ -9,7 +10,7 @@ it('restarts publish frozen snapshots exactly once and default manual publishing
  const scheduled=await service.createSchedule(id,{key:randomUUID(),revision:1,expectedScheduleRevision:null,runAt:new Date(Date.now()+1000)});
  await repo.saveDraft(id,{body:'unscheduled'},1);
  await Promise.all([service.scanDueSchedules(new Date(Date.now()+5000)),service.scanDueSchedules(new Date(Date.now()+5000))]);
- expect((await repo.getPublicVersionBySlug('note','scheduled'))?.body).toBe('scheduled');
+ expect((await getCurrentPublicBySlug(pool,'note','scheduled'))?.body).toBe('scheduled');
  expect((await pool.query('SELECT * FROM publication_events WHERE content_id=$1',[id])).rowCount).toBe(1);
  expect((await pool.query('SELECT status FROM schedules WHERE id=$1',[scheduled.id])).rows[0].status).toBe('completed');
  const next=await service.createSchedule(id,{key:randomUUID(),revision:2,expectedScheduleRevision:null,runAt:new Date(Date.now()+60_000)});

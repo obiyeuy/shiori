@@ -20,7 +20,7 @@ Arctic 候选版本已被 npm 标记停止支持，未采用；改用 oauth4weba
 
 ## 数据库与迁移契约
 
-SQL 是结构权威，Drizzle 表定义是代码映射；SQL 中的延迟复合 FK、永久 alias 归属、版本不可变触发器不能用自动 push 覆盖。公开指针必须引用本内容版本；`(type,slug)` 永久保留命名空间。归档不改变公开指针；撤回查询结果为空。首次发布时间及首次发布后类型不可改。draft CAS 先锁内容实体，覆盖首次并发保存；未结束排期含 pending/running/retrying/failed，至多一条。
+SQL 是结构权威，Drizzle 表定义是代码映射；SQL 中的延迟复合 FK、永久 alias 归属、版本不可变触发器不能用自动 push 覆盖。生产环境禁止使用 `drizzle-kit push` 替代受控 SQL migration；修改表结构时必须同时检查 SQL、Drizzle 映射和迁移验证。公开指针必须引用本内容版本；`(type,slug)` 永久保留命名空间。归档不改变公开指针；撤回查询结果为空。首次发布时间及首次发布后类型不可改。draft CAS 先锁内容实体，覆盖首次并发保存；未结束排期含 pending/running/retrying/failed，至多一条。
 
 `pnpm db:migrate` 在事务和 advisory lock 下执行迁移并记录 SHA-256；重复执行不重复 DDL，摘要不符拒绝。失败回滚并停止，不做破坏性 down。演练/测试建立新数据库或 schema，保留原记录，不删除目录、文件或测试数据库。`pnpm db:search-index` 是显式可选迁移，基础迁移不要求扩展权限。
 
