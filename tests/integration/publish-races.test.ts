@@ -2,6 +2,7 @@ import {it,expect,afterAll} from 'vitest';
 import {randomUUID} from 'node:crypto';
 import {testDatabase} from '../helpers/database.js';
 import {ContentRepository} from '../../src/lib/server/content/repository.js';
+import {getCurrentPublicBySlug} from '../helpers/content-fixture.js';
 import {PublicationService} from '../../src/lib/server/publish/service.js';
 const pool=await testDatabase();afterAll(()=>pool.end());const repo=new ContentRepository(pool);const service=new PublicationService(pool);
 async function draft(slug:string){const id=await repo.createContent('article');await repo.saveDraft(id,{title:'Title',body:'body',slug},0);return id;}
@@ -12,7 +13,7 @@ it('publishes once by idempotency key, keeps RSS identity and rejects changed co
  await repo.saveDraft(id,{body:'new',slug:'two'},1);
  await expect(service.publishNow(id,{...options,key:randomUUID()})).rejects.toThrow(/修订/);
  const second=await service.publishNow(id,{...options,key:randomUUID(),revision:2,important:true});expect(second.rssId).toBe(a.rssId);
- expect((await repo.getPublicVersionBySlug('article','one'))?.slug).toBe('two');
+ expect((await getCurrentPublicBySlug(pool,'article','one'))?.slug).toBe('two');
  expect((await pool.query("SELECT * FROM publication_events WHERE content_id=$1 AND kind='important'",[id])).rowCount).toBe(1);
 });
 it('preflight blocks missing references and rollback preserves the old public version',async()=>{

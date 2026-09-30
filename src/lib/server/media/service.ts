@@ -21,14 +21,16 @@ export class MediaService {
  async stageUpload(input:{name:string;bytes:Buffer}):Promise<Media>{
   if((await this.capacity()).decision==='stop')throw new Error('存储容量不足或未知，暂停新增媒体');
   const meta=await inspectUpload(input.bytes,input.name);const key=randomUUID();const fileKey=`${key}-original`;
-  await writeFile(join(this.root,fileKey),input.bytes,{flag:'wx',mode:0o600});
   const client=await this.pool.connect();
   try{
    await client.query('BEGIN');
    await client.query('INSERT INTO media(key,name,mime,bytes,state,width,height,animated) VALUES($1,$2,$3,$4,\'pending\',$5,$6,$7)',[key,input.name.slice(0,200),meta.mime,input.bytes.length,meta.width??null,meta.height??null,meta.animated]);
-   await client.query("INSERT INTO media_variants(media_key,variant,file_key,mime,bytes) VALUES($1,'original',$2,$3,$4)",[key,fileKey,meta.mime,input.bytes.length]);
    await client.query('COMMIT');
   }catch(e){await client.query('ROLLBACK');throw e;}finally{client.release();}
+  try{await writeFile(join(this.root,fileKey),input.bytes,{flag:'wx',mode:0o600});}
+  catch(e){await this.pool.query('UPDATE media SET state=\'failed\',error=$2 WHERE key=$1',[key,e instanceof Error?e.message:'文件暂存失败']);throw e;}
+  try{await this.pool.query("INSERT INTO media_variants(media_key,variant,file_key,mime,bytes) VALUES($1,'original',$2,$3,$4)",[key,fileKey,meta.mime,input.bytes.length]);}
+  catch(e){await this.pool.query('UPDATE media SET state=\'failed\',error=$2 WHERE key=$1',[key,e instanceof Error?e.message:'媒体登记失败']);throw e;}
   return this.get(key);
  }
  async get(key:string,db:Pool|PoolClient=this.pool):Promise<Media>{if(!uuid.test(key))throw new Error('无效媒体键');const row=(await db.query('SELECT * FROM media WHERE key=$1',[key])).rows[0];if(!row)throw new Error('媒体不存在');return row;}
@@ -36,10 +38,16 @@ export class MediaService {
   if(!uuid.test(key))throw new Error('无效媒体键');
   const client=await this.pool.connect();
   try{
-   // Session lock is automatically released on process disconnect; retry can recover processing items.
-   await client.query('SELECT pg_advisory_lock(7192601)');
+   // Session lock is automatically released on process disconnect; retries recover processing items.
+   await client.query('SELECT pg_advisory_lock(hashtextextended($1, 0))',[key]);
    const media=await this.get(key,client);if(media.state==='ready')return;
    if((await this.capacity(client)).decision==='stop')throw new Error('存储容量不足或未知');
+   const originalKey=`${key}-original`;
+   const originalPath=join(this.root,originalKey);
+   const originalStat=await stat(originalPath);
+   if(originalStat.size!==Number(media.bytes))throw new Error('原始媒体文件不完整，等待重新上传');
+   const registered=await client.query("SELECT 1 FROM media_variants WHERE media_key=$1 AND variant='original'",[key]);
+   if(!registered.rowCount)await client.query("INSERT INTO media_variants(media_key,variant,file_key,mime,bytes) VALUES($1,'original',$2,$3,$4)",[key,originalKey,media.mime,originalStat.size]);
    await client.query("UPDATE media SET state='processing',error=NULL WHERE key=$1",[key]);
    const original=await this.authorizeMedia(true,key,'original',client);
    if(media.mime.startsWith('image/')&&!media.animated){
@@ -49,7 +57,7 @@ export class MediaService {
    }
    await client.query("UPDATE media SET state='ready',error=NULL,processed_at=now(),processor=$2 WHERE key=$1",[key,JSON.stringify(sharp.versions)]);
   }catch(e){await client.query("UPDATE media SET state='failed',error=$2 WHERE key=$1",[key,e instanceof Error?e.message:'处理失败']);throw e;}
-  finally{await client.query('SELECT pg_advisory_unlock(7192601)').catch(()=>undefined);client.release();}
+  finally{await client.query('SELECT pg_advisory_unlock(hashtextextended($1, 0))',[key]).catch(()=>undefined);client.release();}
  }
  async authorizeMedia(owner:boolean,key:string,variant:string,db:Pool|PoolClient=this.pool):Promise<{path:string;mime:string;bytes:number;name:string}>{
   if(!uuid.test(key)||!['display','original'].includes(variant))throw new Error('无效媒体键');

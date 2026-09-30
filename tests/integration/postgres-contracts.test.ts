@@ -3,6 +3,7 @@ import { readFile } from 'node:fs/promises';
 import { randomUUID } from 'node:crypto';
 import { beforeAll, afterAll, describe, it, expect } from 'vitest';
 import { ContentRepository } from '../../src/lib/server/content/repository.js';
+import {publishFixture,getCurrentPublicBySlug} from '../helpers/content-fixture.js';
 import { initializeOwner } from '../../src/lib/server/auth/service.js';
 const pool = new Pool({connectionString: process.env.DATABASE_URL});
 beforeAll(async () => {
@@ -19,12 +20,12 @@ afterAll(async()=>{await db?.end();});
 describe('production PostgreSQL constraints', () => {
  it('allows same slug across types, preserves aliases and returns canonical slug', async()=>{
   const repo=new ContentRepository(db);const a=await repo.createContent('article'); const n=await repo.createContent('note');
-  await repo.publish(a,{title:'A',body:'text',slug:'shared'} as any);
-  await repo.publish(n,{title:'N',body:'text',slug:'shared'} as any);
-  await repo.publish(a,{title:'A2',body:'text2',slug:'new'} as any);
-  expect((await repo.getPublicVersionBySlug('article','shared'))?.slug).toBe('new');
+  await publishFixture(db,a,{title:'A',body:'text',slug:'shared'} as any);
+  await publishFixture(db,n,{title:'N',body:'text',slug:'shared'} as any);
+  await publishFixture(db,a,{title:'A2',body:'text2',slug:'new'} as any);
+  expect((await getCurrentPublicBySlug(db,'article','shared'))?.slug).toBe('new');
   const other=await repo.createContent('article');
-  await expect(repo.publish(other,{title:'Other',body:'text',slug:'shared'} as any)).rejects.toThrow();
+  await expect(publishFixture(db,other,{title:'Other',body:'text',slug:'shared'} as any)).rejects.toThrow();
  });
  it('serializes first draft writes without losing either conflict payload',async()=>{
   const repo=new ContentRepository(db);const id=await repo.createContent('article');
@@ -39,18 +40,18 @@ describe('production PostgreSQL constraints', () => {
  });
  it('rejects cross-content public pointers and immutable version edits',async()=>{
   const repo=new ContentRepository(db);const a=await repo.createContent('article');const b=await repo.createContent('article');
-  const version=await repo.publish(a,{title:'Immutable',body:'body',slug:'immutable'} as any);
+  const version=await publishFixture(db,a,{title:'Immutable',body:'body',slug:'immutable'} as any);
   await expect(db.query('update content_items set public_version_id=$1 where id=$2',[version.id,b])).rejects.toThrow();
   await expect(db.query('update versions set payload=$1 where id=$2',[{title:'changed'},version.id])).rejects.toThrow();
  });
 });
 it('keeps one unfinished schedule including failed tasks, and withdrawn aliases reveal nothing',async()=>{
  const repo=new ContentRepository(db);const id=await repo.createContent('article');
- const version=await repo.publish(id,{title:'Scheduling',body:'body',slug:'scheduling'});
+ const version=await publishFixture(db,id,{title:'Scheduling',body:'body',slug:'scheduling'});
  await db.query("INSERT INTO schedules(id,content_id,version_id,status,run_at) VALUES($1,$2,$3,'failed',now())",[randomUUID(),id,version.id]);
  await expect(db.query("INSERT INTO schedules(id,content_id,version_id,status,run_at) VALUES($1,$2,$3,'pending',now())",[randomUUID(),id,version.id])).rejects.toThrow();
  await db.query("UPDATE schedules SET status='cancelled' WHERE content_id=$1",[id]);
  await db.query("INSERT INTO schedules(id,content_id,version_id,status,run_at) VALUES($1,$2,$3,'pending',now())",[randomUUID(),id,version.id]);
  await db.query('UPDATE content_items SET public_version_id=NULL WHERE id=$1',[id]);
- expect(await repo.getPublicVersionBySlug('article','scheduling')).toBeNull();
+ expect(await getCurrentPublicBySlug(db,'article','scheduling')).toBeNull();
 });

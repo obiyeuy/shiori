@@ -16,7 +16,7 @@ beforeAll(async()=>{
  id=await repo.createContent('article');await repo.saveDraft(id,{title:'公开浏览测试',slug:'browser-old',body:'# 公开正文\n\n关键词紫杉\n\n| 表格 | 内容 |\n| --- | --- |\n| 中文 | 正文 |',commentsEnabled:true},0);await publish.publishNow(id,{key:randomUUID(),revision:1,expectedScheduleRevision:null});
  await repo.saveDraft(id,{slug:'browser-new'},1);await publish.publishNow(id,{key:randomUUID(),revision:2,expectedScheduleRevision:null});
  const root=process.env.SITE_VERIFY_ROOT?resolve(process.env.SITE_VERIFY_ROOT,'public-browser'):undefined;if(root)await mkdir(root,{recursive:true});
- server=spawn(process.execPath,['node_modules/vite/bin/vite.js','--host','127.0.0.1','--port','5202','--strictPort'],{env:{...process.env,...(root?{SITE_VERIFY_ROOT:root}:{}),PGOPTIONS:db.options.options,NODE_ENV:'development',PUBLIC_SITE_URL:base},stdio:'pipe'});
+ server=spawn(process.execPath,['node_modules/vite/bin/vite.js','--host','127.0.0.1','--port','5202','--strictPort'],{env:{...process.env,...(root?{SITE_VERIFY_ROOT:root}:{}),PGOPTIONS:db.options.options,NODE_ENV:'development',PUBLIC_SITE_URL:base,SESSION_SECRET:'browser-test-only-session-secret-1234567890'},stdio:'pipe'});
  server.stdout?.on('data',x=>{log+=x;});server.stderr?.on('data',x=>{log+=x;});
  for(let i=0;i<200;i++){if(server.exitCode!==null)throw new Error(log);try{if((await fetch(base)).ok)break;}catch{/* startup */}await new Promise(r=>setTimeout(r,100));}
  await mkdir('.local/browser-profiles',{recursive:true});
@@ -36,11 +36,11 @@ it('serves public pages, canonical pagination, aliases and private isolation',as
 it('restores search filters on back and remains readable at 320px, dark theme and 200% text',async()=>{
  await page.goto(base+'/search?q=紫杉&type=article');await page.getByRole('link',{name:'公开浏览测试',exact:true}).click();await page.waitForURL('**/articles/browser-new');await page.goBack();
  expect(await page.getByLabel('关键词').inputValue()).toBe('紫杉');expect(await page.getByLabel('文章',{exact:true}).isChecked()).toBe(true);expect(await page.locator('meta[name="robots"]').getAttribute('content')).toBe('noindex,follow');
- await page.setViewportSize({width:320,height:800});await page.emulateMedia({reducedMotion:'reduce'});await page.getByLabel('主题',{exact:true}).selectOption('dark');
+ await page.setViewportSize({width:320,height:800});await page.emulateMedia({reducedMotion:'reduce'});await page.getByRole('button',{name:'当前：跟随系统；点击切换为浅色',exact:true}).click();await page.getByRole('button',{name:'当前：浅色；点击切换为深色',exact:true}).click();
  expect(await page.locator('html').getAttribute('data-theme')).toBe('dark');await page.evaluate(()=>{document.documentElement.style.fontSize='200%';});
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await page.screenshot({path:`${evidence}/public-search-mobile.png`,fullPage:true});
  await page.goto(base);await page.keyboard.press('Tab');expect(await page.getByRole('link',{name:'跳到主要内容'}).evaluate(e=>e===document.activeElement)).toBe(true);
- await page.setViewportSize({width:1440,height:1000});await page.getByLabel('主题',{exact:true}).selectOption('light');await page.screenshot({path:`${evidence}/public-home-desktop.png`,fullPage:true});
+ await page.setViewportSize({width:1440,height:1000});await page.getByRole('button',{name:'当前：深色；点击切换为跟随系统',exact:true}).click();await page.getByRole('button',{name:'当前：跟随系统；点击切换为浅色',exact:true}).click();await page.screenshot({path:`${evidence}/public-home-desktop.png`,fullPage:true});
 });
 it('resets the loaded discussion when navigating between two public articles',async()=>{
  const repo=new ContentRepository(db);const next=await repo.createContent('article');await repo.saveDraft(next,{title:'第二篇讨论',slug:'second-discussion',body:'正文',commentsEnabled:true},0);await publish.publishNow(next,{key:randomUUID(),revision:1,expectedScheduleRevision:null});
@@ -48,7 +48,7 @@ it('resets the loaded discussion when navigating between two public articles',as
  await page.route('https://giscus.app/client.js',route=>route.fulfill({contentType:'text/javascript',body:`(()=>{const script=document.currentScript;const frame=document.createElement('iframe');frame.setAttribute('data-discussion',script.dataset.term);script.parentNode.append(frame);})();`}));
  await page.goto(base+'/articles/browser-new');await page.getByRole('button',{name:'加载评论',exact:true}).click();await page.locator('iframe[data-discussion]').waitFor();
  expect(await page.locator('iframe[data-discussion]').getAttribute('data-discussion')).toBe(id);
- await page.getByRole('link',{name:'上一篇：第二篇讨论',exact:true}).click();await page.waitForURL('**/second-discussion');
+ await page.getByRole('link',{name:'第二篇讨论',exact:true}).click();await page.waitForURL('**/second-discussion');
  expect(await page.locator('iframe[data-discussion]').count()).toBe(0);await page.getByRole('button',{name:'加载评论',exact:true}).click();await page.locator('iframe[data-discussion]').waitFor();expect(await page.locator('iframe[data-discussion]').getAttribute('data-discussion')).toBe(next);
  await page.unroute('https://giscus.app/client.js');
 });
